@@ -1,0 +1,53 @@
+.M1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    height: 100%;
+    border: 5px solid #d99737;
+    background-color:#d99737 ;
+    .M2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 97%;  
+        height: 97%;
+        background-color:#b26132 ;
+        .M3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 97%;  
+            height: 97%;
+            background-color:#d2873d ;
+            .M4{
+                width: 97%;  
+                height: 97%;
+                position: relative;
+                background-color:#8c4512 ;
+                .download{
+                    height: 100%;
+                    width: 100%;
+                    
+                }
+                img{       
+                    z-index: 1;
+                    width:100%;
+                    height: 100%;
+                    transition: transform 1.2s;
+                    transition-delay: 0.15s;
+                    &:hover{
+                        position: relative;
+                        z-index: 2;
+                        transform: scale(1.2);
+                        
+                    }          
+                }  
+                .imgHide{
+                    visibility:hidden;
+                }        
+            }
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 export default {
   components: true,
-  Target:'static',
+  target:'static',
   // Target: https://go.nuxtjs.dev/config-target
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

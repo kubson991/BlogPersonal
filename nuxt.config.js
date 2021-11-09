@@ -1,4 +1,5 @@
 export default {
+  components: true,
   // Target: https://go.nuxtjs.dev/config-target
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -19,6 +20,15 @@ export default {
     baseURL: 'https://res.cloudinary.com/dl4ytevqi/image/upload/'
   },
     domains: ['https://i.imgur.com'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
+    },
 },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["@/css/global.scss"],
@@ -56,5 +66,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }

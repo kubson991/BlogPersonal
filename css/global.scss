@@ -26,6 +26,12 @@ h1{
 h2{
     font-size: 1.1em;
 }
+a{
+    color: $color-variacion;
+    &:hover{
+        color: $color-variacionTrasparente;
+    }
+}
 body::-webkit-scrollbar {
     width: 10px;
     background-color: $color-gris

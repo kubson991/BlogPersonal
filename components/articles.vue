@@ -1,9 +1,9 @@
 <template lang="pug">
     article    
-        img(:src="require(`../assets/img/${this.article.imagen}`)", :alt="this.article.alt")  
+        nuxt-img(:src="this.article.imagen", :alt="this.article.alt" , provider="cloudinary", format="webp" , width="250")  
         h1 {{article.h1}}
         p {{article.p}}
-        NuxtLink(to=`/`) Leer mas    
+        NuxtLink(:to="this.article.to") Leer mas    
 </template>
 <script>
 export default {

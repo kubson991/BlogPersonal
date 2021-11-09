@@ -25,11 +25,11 @@ export default {
         return{
             articles:[
                 {        
-                    imagen:'facebookIcon.png',
-                    alt:'PAPA',
-                    h1:'maquetacion de patatavid',
-                    p:'esto si es un lorem ipsum y noa mamadas muchas mas cosas vienen entre todo esto texto largo porque si xd lmaoalfnalfnakfnakjf',
-                    to:'/'
+                    imagen:'v1636343788/blogPersonal/blogs/imagen_2021-11-07_225625_jtzqzl.png',
+                    alt:'patatavid',
+                    h1:'Maquetacion de patatavid',
+                    p:'Maquetacion totalmente responsive de la pagina "PatataVid" a base unicamente de HTML CSS y JS vanila , respetando principios de diseno movile first y siguiendo modelado en figma.',
+                    to:'/blog/patatavid'
                 },
                 {
                     imagen:'facebookIcon.png',

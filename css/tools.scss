@@ -1,0 +1,56 @@
+@import "config.scss";
+
+.contenedor{
+    width: fit-content;
+    min-width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: transform 1s;
+    
+    &:hover{        
+        position: relative;
+        transform: rotateX(360deg);
+    }
+    div{
+        display: inline-block;
+    }
+    .punta{
+        position: relative;
+        height: 0;
+        width: 0;
+        border-left: none;
+        border-top: solid 20px transparent;
+        border-bottom:solid 20px transparent ;
+        border-right: solid 40px;
+        border-right-color: #f7df1e ;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 30%;
+        &:after{
+            position: absolute;
+            left: 23px;
+            bottom: -3px;
+            content: ' ';
+            display: block;
+            background-color: $color-gris;
+            padding:3px;
+            border-radius: 100%;
+        }
+    }
+    .cuadro{
+        min-width: 68px;
+        height: 100%;
+        background-color: #f7df1e;
+        color: black;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 8px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 1px;
+        border-bottom-left-radius: 1px;
+    }
+}

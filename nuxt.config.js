@@ -1,7 +1,6 @@
 export default {
   components: true,
   // Target: https://go.nuxtjs.dev/config-target
-  Target:true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'BlogPersonal',

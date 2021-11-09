@@ -9,7 +9,7 @@
                     p Estudiante de decimo semestre de la universidad Autónoma de Bucaramanga con nivel intermedio de inglés y buenas aptitudes en el trabajo colaborativo.
                     p Soy una persona responsable, puntual, autodidacta, creativa y con muy buena disposición para cualquier tarea que se me asigne. Actualmente me estoy certificando en desarrollo web con Platzi. 
                     p Me interesa principalmente trabajar en proyectos nuevos y con un enfoque social, en el área de desarrollo web principalmente como Frontend developer. 
-                    p Actualmente soy practicante en Carvajal tecnología y servicios, siendo a su vez futuro miembro del equipo del área de innovación.
+                    p Actualmente soy practicante en Carvajal tecnología y servicios trabajando para el area de Frontend en el proyecto "Liquidez ya", siendo a su vez futuro miembro del equipo del área de innovación.
             h2 Mis certificaciones
             section.main__certificaciones
                 marco(v-for="certificado in certificaciones" :certificacion="certificado" :key="certificado")                  

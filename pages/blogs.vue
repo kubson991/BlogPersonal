@@ -6,7 +6,7 @@
                 nuxt-img(src="v1635112679/blogPersonal/indexpage_vbluxj.png", alt="blog" , provider="cloudinary" sizes="md:615px xl:625px" , format="webp")
                 article.principal__articulo
                     h1 Creacion de un blog profesional con el uso de dipslay Grid y Display Flex
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto impedit ab facilis temporibus consequatur magni ex optio a voluptatibus unde facere odit similique voluptatum deserunt architecto iste, accusantium minus aspernatur. Reprehenderit error, libero ut eos incidunt, ratione, reiciendis dolorem fugiat nulla veritatis earum optio neque laudantium vitae. Unde atque, fugiat rerum perferendis sapiente, non magnam earum aliquid, ad autem dolore.   
+                    p Al día de hoy muchos desarrolladores discuten cuando usar display flex y cuando display grid, la realidad es que la combinación de ambos puede ser siempre la mejor respuesta, este blog presenta un patrón que enfatiza en uso de Flex para su maquetación y Grid para sus componentes más pequeños teniendo así lo mejor de ambos mundos y por supuesto no olvidemos el uso de VueJS con Nuxt que hace posible el enrutamiento y división por módulos del proyecto.
                     nuxt-link.boton-articulos(:to="`/blog/MiBlog`") Leer mas
             section.main__blogs
                 h2 Mis proyectos
@@ -32,53 +32,26 @@ export default {
                     to:'/blog/patatavid'
                 },
                 {
-                    imagen:'facebookIcon.png',
-                    alt:'piedra papel y tijera',
-                    h1:'Piedra papel o tijera con javaScript',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                    
+                    imagen:'v1636482727/blogPersonal/blogs/imagen_2021-11-09_133204_d0xcuo.png',
+                    alt:'Rick and Morty App',
+                    h1:'Rick and Morty App',
+                    p:'Y con ustedes una app que muestra todos los personajes de la popular serie Rick y Morty mediante la consulta a una API rest y el uso de Nuxt prar mostrar targetas con la informacion de que cada personaje.',
+                    to:'/blog/RickyAndMorty'                    
                 },
                 {
-                    imagen:'facebookIcon.png',
-                    alt:'platziGames',
-                    h1:'Maquetacion de sitio web estatico con preprocesadores',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
+                    imagen:'v1636485380/blogPersonal/blogs/imagen_2021-11-09_141617_nyrzig.png',
+                    alt:'Lego',
+                    h1:'Sitio Web de lego',
+                    p:'Creacion de sitio web acerca de heroes de DC en lego ,hecho en su totalidad con animaciones sin ayuda de bibliotecas ,con solo HTML y JS vanila (es un sitio de muestra sin enrutador).',
+                    to:'/blog/LegoBlog'                     
                 },
                 {
-                    imagen:'facebookIcon.png',
+                    imagen:'v1636484864/blogPersonal/blogs/imagen_2021-11-09_140743_tqnbuz.png',
                     alt:'platzi exchange',
                     h1:'creacion y despliegue de pagina acerca de criptomonedas',
                     p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
+                    to:'/blog/platziExchange'                     
                 },
-                {
-                    imagen:'facebookIcon.png',
-                    alt:'Maquetacion de google',
-                    h1:'maquetacion de google',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
-                },                {
-                    imagen:'facebookIcon.png',
-                    alt:'maquetacion de wikipedia',
-                    h1:'Maquetacion de wikipedia',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
-                },                
-                {
-                    imagen:'facebookIcon.png',
-                    alt:'Rick y Morty',
-                    h1:'SWA de Rick y Morty',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
-                },
-                {
-                    imagen:'facebookIcon.png',
-                    alt:'reproductor',
-                    h1:'maquetacion de reproductor movil usando dimorfismo',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
-                    to:'/'                     
-                }
             ]
         }
     },

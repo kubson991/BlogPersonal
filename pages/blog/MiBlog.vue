@@ -26,7 +26,7 @@ Este blog es la recopilación de todo lo que he aprendido a lo largo de mi traye
 
 Al día de hoy muchos desarrolladores discuten cuando usar display flex y cuando display grid, la realidad es que la combinación de ambos puede ser siempre la mejor respuesta, este blog presenta un patrón que enfatiza en uso de Flex para su maquetación y Grid para sus componentes más pequeños teniendo así lo mejor de ambos mundos y por supuesto no olvidemos el uso de VueJS con Nuxt que hace posible el enrutamiento y división por módulos del proyecto.
 `,
-        tags:['Vue','Nuxt','CSS','HTML','JS','Responsive','PWA','Jest',"Node"],
+        tags:['Vue','Nuxt','CSS','HTML','JS','RWD','PWA','Jest',"Node"],
         direccion:'https://portafoliodesebastianpoveda.netlify.app'
         }
     }   

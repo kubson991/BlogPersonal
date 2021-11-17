@@ -25,7 +25,11 @@ $color-variacionTrasparente:var(--color-variacionTrasparente);
     background-image: url($img);
     @include backgroundConfig();
     width: 40px;
-    height: 40px;  
+    height: 40px;
+    @media (min-width: 1600px) {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @mixin boton(){

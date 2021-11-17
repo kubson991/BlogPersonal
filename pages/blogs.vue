@@ -35,7 +35,7 @@ export default {
                     imagen:'v1636482727/blogPersonal/blogs/imagen_2021-11-09_133204_d0xcuo.png',
                     alt:'Rick and Morty App',
                     h1:'Rick and Morty App',
-                    p:'Y con ustedes una app que muestra todos los personajes de la popular serie Rick y Morty mediante la consulta a una API rest y el uso de Nuxt prar mostrar targetas con la informacion de que cada personaje.',
+                    p:'Y con ustedes una app que muestra todos los personajes de la popular serie Rick y Morty mediante la consulta a una API rest y el uso de Nuxt para mostrar tarjetas con la informacion de que cada personaje.',
                     to:'/blog/RickyAndMorty'                    
                 },
                 {
@@ -49,8 +49,15 @@ export default {
                     imagen:'v1636484864/blogPersonal/blogs/imagen_2021-11-09_140743_tqnbuz.png',
                     alt:'platzi exchange',
                     h1:'creacion y despliegue de pagina acerca de criptomonedas',
-                    p:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum officiis aliquam quaerat facere est minima voluptatem officia, tenetur sint aspernatur sequi tempora saepe similique. Inventore vitae quibusdam reiciendis illo',
+                    p:'Uno de los proyectos mas complejos en los que trabaje ,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
                     to:'/blog/platziExchange'                     
+                },
+                                {
+                    imagen:'v1637178397/blogPersonal/blogs/imagen_2021-11-17_144635_yokxze.png',
+                    alt:' Nike component',
+                    h1:'Componente para promociones Nike hecho con Web Components',
+                    p:'Creacion de un componente web con javaScript vanila , HTML y CSS con tematica de zapatos Nike ,siendo este componente totalmente reutilizable y compatible con cualquier framework debido a que es un "wep component".',
+                    to:'/blog/NikeComponent'                     
                 },
             ]
         }

@@ -20,9 +20,12 @@ export default {
         return{
             img:'v1636343788/blogPersonal/blogs/imagen_2021-11-07_225625_jtzqzl.png', //usando cloudinary
             h1:'Patatavid',
-            pre:`exercitationem tempore voluptas rerum officiis! Provident quidem voluptas aspernatur ex? Obcaecati libero vitae ipsa, rerum fugit incidunt rem accusantium officiis maiores soluta molestiae sapiente atque aspernatur nesciunt veniam doloremque optio beatae ut ad iusto itaque culpa tempore aliquam laborum. Odit. Quae dolor a, modi repellat temporibus dolorum sed nemo molestias voluptas vel possimus, culpa architecto voluptatibus eius aliquid nesciunt officiis quaerat rerum blanditiis dolore corrupti numquam! Et nostrum quam molestiae! Corrupti, cum maiores natus quasi nobis, officiis quas, aliquam aut odit possimus obcaecati libero ipsum incidunt. Maxime consequuntur reiciendis accusantium distinctio blanditiis, maiores debitis rerum quo et cumque dolorem nam? Dolores ipsum iure sint maiores. Veniam fugiat recusandae qui. In eum error sunt accusamus nesciunt ut blanditiis odio tempora reiciendis nemo. Minus eligendi debitis magnam, delectus ad molestiae accusantium eum. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+            pre:`La presente maquetación es hecha con el paradigma de “movile first” siguiendo un diseño planteado en figma para la base movile y de libre elección para el resto de tamaños.
+
+Lo que caracteriza a esta maquetación ,es el hecho de que fue hecho sin librerías o frameworks ,solo con CSS y HTML puro destacando también el uso de JavaScript para la interactividad entre el cambio de tablas presente al presionar los iconos de flechas y tambien el uso la etiqueta <table> que ha sido ampliamente descartada por el uso de CSS grid sin tener en cuenta que en ocasiones particulares el uso de table puede evitar el uso de css sin necesidad .
+`,
             tags:['JS','CSS','HTML','RWD'],
-            direccion:'https://cranky-einstein-f83dd1.netlify.app/#plans'
+            direccion:'https://patatavidmaquetacion.netlify.app'
         }
     }   
 }

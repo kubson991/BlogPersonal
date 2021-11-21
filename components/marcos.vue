@@ -4,7 +4,7 @@ div.M1
         div.M3
             div.M4
                 download.download(v-if="!condition" :radius="'100px'")
-                nuxt-img(v-show="condition", :src="this.certificacion" ,alt="certificado" ,provider="cloudinary" ,format="webp" , loading="lazy" , :class="{imgHide: !loaded }", @load.native="doSomethingOnLoad") 
+                nuxt-img(v-show="condition", :src="this.certificacion" ,alt="certificado" ,provider="cloudinary" ,format="webp" , loading="lazy" , :class="{imgHide: !loaded }", @load.native="doSomethingOnLoad" , sizes="xs:300px sm:560px md:420px lg:370px xxl:570px" ) 
 </template>
 <script>
 import download from '@/components/downloadsMasks/circleDownload.vue'
@@ -27,6 +27,11 @@ export default {
     },
     mounted(){
         this.condition = true
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('~static/sw.js').then(() => {
+        console.log('registered');
+    }, err => console.log(err));
+        }
     }
 }
 </script>

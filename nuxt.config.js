@@ -22,7 +22,7 @@ export default {
     domains: ['https://i.imgur.com'],
     screens: {
       xs: 320,
-      sm: 640,
+      sm: 620,
       md: 768,
       lg: 1024,
       xl: 1280,

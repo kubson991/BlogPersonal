@@ -49,14 +49,14 @@ export default {
                     imagen:'v1636484864/blogPersonal/blogs/imagen_2021-11-09_140743_tqnbuz.png',
                     alt:'platzi exchange',
                     h1:'creacion y despliegue de pagina acerca de criptomonedas',
-                    p:'Uno de los proyectos mas complejos en los que trabaje ,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
+                    p:'aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
                     to:'/blog/platziExchange'                     
                 },
                                 {
                     imagen:'v1637178397/blogPersonal/blogs/imagen_2021-11-17_144635_yokxze.png',
                     alt:' Nike component',
-                    h1:'Componente para promociones Nike hecho con Web Components',
-                    p:'Creacion de un componente web con javaScript vanila , HTML y CSS con tematica de zapatos Nike ,siendo este componente totalmente reutilizable y compatible con cualquier framework debido a que es un "wep component".',
+                    h1:'Componente para Nike hecho con "Web Components"',
+                    p:'Creacion de un componente web con javaScript vanila , HTML y CSS con tematica de zapatos Nike ,siendo este componente totalmente reutilizable y compatible con cualquier framework.',
                     to:'/blog/NikeComponent'                     
                 },
             ]

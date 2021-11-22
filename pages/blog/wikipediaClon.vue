@@ -15,14 +15,14 @@ import footerB from '@/components/footer.vue'
 import main_blog from '@/components/blog.vue'
 export default {
     components:{headerB,footerB,main_blog},
-    name:'RickAndMorty', 
+    name:'platziExchange', 
     data(){
         return{
-            img:'v1636482727/blogPersonal/blogs/imagen_2021-11-09_133204_d0xcuo.png', //usando cloudinary
-            h1:'Rick and Morty App',
-            pre:`Y con ustedes una app que muestra todos los personajes de la popular serie Rick y Morty mediante la consulta a una API rest y el uso de Nuxt para mostrar tarjetas con la informacion de que cada personaje.`,
-            tags:['JS','CSS','HTML','RWD','Vue','Nuxt'],
-            direccion:'https://rickymorty-nuxt.netlify.app'
+            img:'v1637557146/blogPersonal/blogs/imagen_2021-11-21_235903_k4xykm.png', //usando cloudinary
+            h1:'Maquetacion del sitio web de wikipedia',
+            pre:`Maquetacion del sitio web de Wikipedia realizado unicamente con HTML y CSS , aclarando que no es una pagina responsive ,unicamente para resoluciones de computadores de escritorio sin embargo es un buen ejercicio de maquetacion ,claro esta que,sin el acceso a las fuentes e imagenes pertinentes esto limito algunos aspectos.`,
+            tags:['CSS','HTML'],
+            direccion:'https://nervous-swartz-0de02a.netlify.app'
         }
     }   
 }

@@ -20,7 +20,7 @@ export default {
         return{
             img:'v1636484864/blogPersonal/blogs/imagen_2021-11-09_140743_tqnbuz.png', //usando cloudinary
             h1:'PlatziExchange',
-            pre:`exercitationem tempore voluptas rerum officiis! Provident quidem voluptas aspernatur ex? Obcaecati libero vitae ipsa, rerum fugit incidunt rem accusantium officiis maiores soluta molestiae sapiente atque aspernatur nesciunt veniam doloremque optio beatae ut ad iusto itaque culpa tempore aliquam laborum. Odit. Quae dolor a, modi repellat temporibus dolorum sed nemo molestias voluptas vel possimus, culpa architecto voluptatibus eius aliquid nesciunt officiis quaerat rerum blanditiis dolore corrupti numquam! Et nostrum quam molestiae! Corrupti, cum maiores natus quasi nobis, officiis quas, aliquam aut odit possimus obcaecati libero ipsum incidunt. Maxime consequuntur reiciendis accusantium distinctio blanditiis, maiores debitis rerum quo et cumque dolorem nam? Dolores ipsum iure sint maiores. Veniam fugiat recusandae qui. In eum error sunt accusamus nesciunt ut blanditiis odio tempora reiciendis nemo. Minus eligendi debitis magnam, delectus ad molestiae accusantium eum. Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
+            pre:`aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).`,
             tags:['JS','CSS','HTML','RWD','Vue','Taildwind'],
             direccion:'https://kubson-exchange.netlify.app'
         }

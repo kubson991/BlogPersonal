@@ -52,12 +52,26 @@ export default {
                     p:'aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
                     to:'/blog/platziExchange'                     
                 },
-                                {
+                {
                     imagen:'v1637178397/blogPersonal/blogs/imagen_2021-11-17_144635_yokxze.png',
                     alt:' Nike component',
                     h1:'Componente para Nike hecho con "Web Components"',
                     p:'Creacion de un componente web con javaScript vanila , HTML y CSS con tematica de zapatos Nike ,siendo este componente totalmente reutilizable y compatible con cualquier framework.',
                     to:'/blog/NikeComponent'                     
+                },
+                {
+                    imagen:'v1637555688/blogPersonal/blogs/imagen_2021-11-21_233446_ihgq5b.png',
+                    alt:'business component',
+                    h1:'Card promocional para business analytics.',
+                    p:'Card creada para promocionar un servicio de data analytics realizado en base a los requerimientos del cliente , enfatizando en que fuera hecho para pantallas de 320px y 1440px.',
+                    to:'/blog/BusinessCard'                     
+                },
+                {
+                    imagen:'v1637557146/blogPersonal/blogs/imagen_2021-11-21_235903_k4xykm.png',
+                    alt:'Clon de wikipedia',
+                    h1:'Clon de wikipedia',
+                    p:'Maquetacion del sitio web de Wikipedia realizado unicamente con HTML y CSS , aclarando que no es una pagina responsive ,unicamente para computadores.',
+                    to:'/blog/wikipediaClon'                     
                 },
             ]
         }

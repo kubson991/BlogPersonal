@@ -73,6 +73,13 @@ export default {
                     p:'Maquetacion del sitio web de Wikipedia realizado unicamente con HTML y CSS , aclarando que no es una pagina responsive ,unicamente para computadores.',
                     to:'/blog/wikipediaClon'                     
                 },
+                {
+                    imagen:'v1637901017/blogPersonal/blogs/imagen_2021-11-25_233013_b26cqt.png',
+                    alt:'Organizador de tiempo',
+                    h1:'Organizador de tiempo',
+                    p:'App web totalmente responsive que obtiene datos para tener registro de las horas que se dedican a distintas actividades, usando web components.',
+                    to:'/blog/calendarCSS'                     
+                },
             ]
         }
     },

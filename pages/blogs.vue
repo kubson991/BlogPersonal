@@ -80,6 +80,13 @@ export default {
                     p:'App web totalmente responsive que obtiene datos para tener registro de las horas que se dedican a distintas actividades, usando web components.',
                     to:'/blog/calendarCSS'                     
                 },
+                {
+                    imagen:'v1638908718/blogPersonal/blogs/imagen_2021-12-07_152512_dsepav.png',
+                    alt:'Calculadora de propinas',
+                    h1:'Tip Calculator',
+                    p:'Calculadora 100% responsive y reactiva para calcular y dividir propinas en dolares,programada con Nuxt y el paradigma de movile first.',
+                    to:'/blog/TipCalculator'                     
+                },
             ]
         }
     },

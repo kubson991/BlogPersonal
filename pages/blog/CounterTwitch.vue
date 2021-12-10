@@ -15,14 +15,14 @@ import footerB from '@/components/footer.vue'
 import main_blog from '@/components/blog.vue'
 export default {
     components:{headerB,footerB,main_blog},
-    name:'Counter', 
+    name:'CounterTwitch', 
     data(){
         return{
-            img:'v1639151834/blogPersonal/blogs/imagen_2021-12-10_105713_ccu5na.png', //usando cloudinary
-            h1:'Contador empresarial',
-            pre:`Contador de tiempo de dias a segundos ,con enfoque empresarial ,actualmente esta adaptado para que sea un contador hasta el proximo diciembre (100% responsive)`,
-            tags:['JS','CSS','HTML','RWD','Vue','Nuxt','Node'],
-            direccion:'https://frosty-volhard-027249.netlify.app'
+            img:'v1639152768/blogPersonal/blogs/imagen_2021-12-10_111245_zyvzur.png', //usando cloudinary
+            h1:'Contador regresivo para Twitch',
+            pre:`Contador de tiempo de dias a segundos ,con enfoque para streamers ,actualmente esta adaptado para que sea un contador hasta que acabe mi licencia de platzi.`,
+            tags:['JS','CSS','HTML'],
+            direccion:'https://peaceful-bhabha-8e6ee3.netlify.app'
         }
     }   
 }

@@ -87,6 +87,13 @@ export default {
                     p:'Calculadora 100% responsive y reactiva para calcular y dividir propinas en dolares,programada con Nuxt y el paradigma de movile first.',
                     to:'/blog/TipCalculator'                     
                 },
+                {
+                    imagen:'v1639151834/blogPersonal/blogs/imagen_2021-12-10_105713_ccu5na.png',
+                    alt:'Contador empresarial ',
+                    h1:'Contador empresarial',
+                    p:'Contador de tiempo de dias a segundos ,con enfoque empresarial ,actualmente esta adaptado para que sea un contador hasta el proximo diciembre (100% responsive)',
+                    to:'/blog/Counter'                     
+                },
             ]
         }
     },

@@ -98,7 +98,7 @@ export default {
                     imagen:'v1639152768/blogPersonal/blogs/imagen_2021-12-10_111245_zyvzur.png',
                     alt:'Contador twitch',
                     h1:'Contador twitch',
-                    p:'Contador de tiempo de dias a segundos ,con enfoque para streamers ,actualmente esta adaptado para que sea un contador hasta que acabe mi licencia de platzi',
+                    p:'Contador de tiempo de dias a segundos ,con enfoque para streamers ,actualmente esta adaptado para que sea un contador hasta que acabe mi licencia de platzi.',
                     to:'/blog/CounterTwitch'                     
                 },
             ]

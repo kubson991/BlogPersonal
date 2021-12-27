@@ -66,5 +66,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    loaders: {
+      scss: { sourceMap: false },
+    },
   },
+  loading:{
+    color:"#e6e9ed",
+    height:'5px'
+  }
 }

@@ -1,13 +1,11 @@
 <template lang="pug">
-    section.pantalla    
-        headerB
-        main   
+    main.pantalla    
+        div   
             nuxt-link.main__boton-index( :to="`/blogs`") Entra ya
 </template>
 <script>
-import headerB from '../components/header.vue'
 export default {
-    components:{headerB},
+    layout:'basic',
     name:'index',
     data(){
         return{

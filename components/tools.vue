@@ -59,6 +59,14 @@ export default {
                 this.background="#01b7d6"
                 this.color = "white"
                 break;
+            case 'React':
+                this.background="#7ddfff"
+                this.color = "white"
+                break;
+            case 'Storage':
+                this.background="#3d4548"
+                this.color = "white"
+                break;
             default:
                 break;
         }

@@ -14,10 +14,6 @@ article::before{
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
-article::after{
-    content: ' ';
-
-}
 
 .giro{
     transform: rotateY(180deg);
@@ -28,7 +24,6 @@ article{
     width: 90%;
     height:450px;
     margin: 10px auto;
-    border: 1px solid rgba(128, 128, 128, 0.274);
     position: relative; 
     z-index: 2;
     transform-style: preserve-3d;
@@ -93,6 +88,7 @@ article{
         border-left:1px solid rgba(128, 128, 128, 0.274) ;
         border-bottom:1px solid rgba(128, 128, 128, 0.274) ;
         cursor: pointer;
+        transform-style: preserve-3d;
         
     }
     .back{
@@ -110,17 +106,7 @@ article{
         transform:rotate(45deg);
         clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
         border-bottom:1px solid rgba(128, 128, 128, 0.274);
-    }
-    .pageBorder::after{
-        content: ' ';
-        background-color: transparent;
-        position: absolute;
-        height: 0px;
-        width: 7rem;
-        bottom: 0;
-        right: 0;
-        transform-origin: 100% 100%;
-        transform:rotate(45deg);
+        transform-style: preserve-3d;
     }
     .tagsContainer{
         position: absolute;

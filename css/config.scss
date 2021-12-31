@@ -1,20 +1,56 @@
 $Fuente1:'Zen Dots', cursive;
 $Fuente2: 'Archivo', sans-serif;
 :root{
+    --color-claroDM:#121212;
+    --color-principalDM:rgb(255, 255, 255);
+    --color-secundarioDM:rgba(255, 255, 255, 0.856);
+    --color-variacionDM:#47cfad;
+    --color-variacionTrasparenteDM:#47cfad88;
+    --color-grisDM:#2a2c2f;
+    --color-grisOscuroDM:#4E545B;
+
+    --color-claroDMO:white;
+    --color-principalDMO:black;
+    --color-secundarioDMO:black;
+    --color-variacionDMO:#47cfac;
+    --color-variacionTrasparenteDMO:#47cfad88;
+    --color-grisDMO:#e6e9ed;
+    --color-grisOscuroDMO:#22272d;
+   
     --color-claro:white;
     --color-principal:black;
+    --color-secundario:black;
     --color-variacion:#47cfac;
     --color-variacionTrasparente:#47cfad88;
     --color-gris:#e6e9ed;
+    --color-grisOscuro:#22272d;
 }
 
 $boxShadow:9px 4px 15px 0px rgba(50, 50, 50, 0.32);
-
 $color-claro:var(--color-claro);
 $color-principal:var(--color-principal);
 $color-variacion:var(--color-variacion);
 $color-gris:var(--color-gris);
 $color-variacionTrasparente:var(--color-variacionTrasparente);
+$color-secundario:var(--color-secundario);
+$color-grisOscuro:var(--color-grisOscuro);
+
+$color-claroDM:var(--color-claroDM);
+$color-principalDM:var(--color-principalDM);
+$color-variacionDM:var(--color-variacionDM);
+$color-variacionTrasparenteDM:var(--color-variacionTrasparenteDM);
+$color-grisDM:var(--color-grisDM);
+$color-secundarioDM:var(--color-secundario);
+$color-grisOscuroDM:var(color-grisOscuroDM);
+
+$color-claroDMO:var(--color-claroDMO);
+$color-principalDMO:var(--color-principalDMO);
+$color-variacionDMO:var(--color-variacionDMO);
+$color-variacionTrasparenteDMO:var(--color-variacionTrasparenteDMO);
+$color-grisDMO:var(--color-grisDMO);
+$color-secundarioDMO:var(--color-secundario);
+$color-grisOscuroDMO:var(color-grisOscuroDMO);
+
 @mixin backgroundConfig(){
     background-position:center;
     background-size: contain;

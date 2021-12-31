@@ -27,7 +27,7 @@ article{
     position: relative; 
     z-index: 2;
     transform-style: preserve-3d;
-    transition: all 2s ;
+    transition: all 1.6s ease-in-out;
     .containerF{
         position: absolute;
         width: 100%;
@@ -96,7 +96,7 @@ article{
     }
     .pageBorder::before{
         content: ' ';
-        background-color: white;
+        background-color: $color-claro;
         position: absolute;
         height: 4rem;
         width: 7.07rem;

@@ -125,7 +125,7 @@ export const state = () => ({
     },
     {
       imagen:
-        'v1640110160/blogPersonal/blogs/imagen_2021-12-21_130918_q7gcmq.png',
+        'v1640834475/blogPersonal/blogs/imagen_2021-12-29_222111_u2wqaf.png',
       alt: 'Todos',
       titulo: 'To do`s App',
       intro: 'Aplicacion multiplataforma que recibe tareas y se indica si estan completadas o no, la informacion es guardada mediante el storage.',
@@ -149,6 +149,7 @@ Al día de hoy muchos desarrolladores discuten cuando usar display flex y cuando
       tags:['CSS','HTML','Vue','Storage','JS','RWD','Node','Nuxt','PWA','Jest'],
     },
   ],
+  darkMode:false
 })
 
 export const getters = {
@@ -159,4 +160,8 @@ export const getters = {
 
 export const actions = () => ({})
 
-export const mutations = {}
+export const mutations = {
+  darkModeChange (state){
+    state.darkMode= !state.darkMode
+  }
+}

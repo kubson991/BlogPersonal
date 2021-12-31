@@ -5,10 +5,10 @@
         h1 {{this.h1}}
         pre {{this.pre}} 
         div().linkSection
-            span() URL: 
+            span() URL : 
             a(:href="direccion") {{this.direccion}}
         section
-            div().tags Tags:
+            div().tags Tags :
             div().tagscontainer
                 tools(v-for="(tag, index) in tags" :key="index" :value="tag")
 </template>

@@ -16,10 +16,12 @@
         width: 90%;
         h1{
             text-align: center;
+            color: $color-principal;
         }   
         p{
             text-align: justify;
             margin: 20px 0;  
+            color: $color-secundario;
         }   
     }
 }
@@ -28,6 +30,7 @@ h2{
     width: 90%;
     margin: 20px auto 0 auto;
     border-bottom: solid 1px $color-gris;
+    color: $color-principal;
 }
 
 .main__certificaciones{

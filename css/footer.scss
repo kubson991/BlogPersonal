@@ -3,11 +3,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #22272d;
+    background-color: $color-grisOscuro;
     border-top: $color-variacion solid 35px;
     color: $color-claro;
     height: 12rem;
     p{
         text-align: center;
+        color: $color-claro;
+        font-weight: 700;
     }
 }

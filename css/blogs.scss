@@ -23,14 +23,18 @@
         width: 85%;
         h1{
             text-align: center;
+            color: $color-principal;
         }
         p{
             margin: 20px 0;
             text-align: justify;
+            color: $color-secundario;
+            opacity: 0.9;
         }
         a{
             margin: 10px 0;
-            @include botonBlogs()  
+            @include botonBlogs();
+            color:$color-principal;
         }
     }
 }
@@ -42,6 +46,7 @@
         border-bottom: 1px solid rgba(128, 128, 128, 0.466);
         margin: 45px auto;
         padding-bottom: 15px;
+        color: $color-principal;
     }
     div{
         display: grid;

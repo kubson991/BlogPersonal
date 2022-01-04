@@ -160,6 +160,28 @@ Al día de hoy muchos desarrolladores discuten cuando usar display flex y cuando
       direccion:'https://portafoliodesebastianpoveda.netlify.app',
       tags:['CSS','HTML','Vue','Storage','JS','RWD','Node','Nuxt','PWA','Jest'],
     },
+    {
+      imagen:'v1641312782/blogPersonal/blogs/imagen_2022-01-04_111301_dokxam.png',
+      alt: 'SunnnySide',
+      titulo: 'SunnySide',
+      intro: 'Pagina de inicio para pagina de servicios de fotografia y diseño creada en React ,100% responsive con menu desplegable en responsive y tecnica ca parallax para desktop.',
+      blog: 'SunnnySide',
+      post:`Pagina de inicio para pagina de servicios de fotografia y diseño creada en React ,100% responsive con menu desplegable en responsive y tecnica ca parallax para desktop,esta pagina no tiene ningun computo o reactividad es por ello que no lo considerare una aplicacion sin embargo es necesario recalcar que se realizo mediante React-Create-App que es una manera de installar un entorno preconfigurado de React de manera agil.`,
+      direccion:'https://romantic-tereshkova-9e2fd8.netlify.app/',
+      tags:['CSS','HTML','JS','Node','React','RWD'],
+    },
+    {
+      imagen:'v1641312702/blogPersonal/blogs/imagen_2022-01-04_111141_xnfrot.png',
+      alt: 'animacion',
+      titulo: 'Contexto de apilamiento',
+      intro: 'Sencillo juego realizado SOLO con css y html que muestra un bucle de animacion realizado tambien con un contador.',
+      blog: 'ContextoDeApilamiento',
+      post:`Sencillo juego realizado SOLO con css y html que muestra un bucle de animacion realizado tambien con un contador.
+      
+Se que estas pensando, "pero esto no tiene nada de especial... incluso si presiono dos veces el mismo personaje se resta el score" bien te dire lo interensate y es que, no tiene javaScript! este mini juego, maneja su logica mediante CSS ,lo cual puede dejar pensando a màs de uno :) .`,
+      direccion:'https://inspiring-jepsen-0b3273.netlify.app',
+      tags:['CSS','HTML'],
+    },
   ],
   darkMode:false
 })

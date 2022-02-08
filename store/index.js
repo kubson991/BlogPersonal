@@ -182,6 +182,16 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       direccion:'https://inspiring-jepsen-0b3273.netlify.app',
       tags:['CSS','HTML'],
     },
+    {
+      imagen:'v1641312702/blogPersonal/blogs/imagen_2022-01-04_111141_xnfrot.png',
+      alt: 'ahorcado',
+      titulo: 'Juego de ahorcado',
+      intro: 'Juego 100% responsive realizado en React ,enfatizando en la funcionalidad y no en su css.',
+      blog: 'ContextoDeApilamiento',
+      post: 'Juego 100% responsive realizado en React ,enfatizando en la funcionalidad y no en su CSS ,sin embargo cabe resaltar que el dibujo del ahorcado es puramente realizado con CSS.',
+      direccion:'https://inspiring-yalow-1b60fa.netlify.app',
+      tags:['CSS','HTML','JS','Node','React','RWD'],
+    },
   ],
   darkMode:false
 })

@@ -183,7 +183,7 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       tags:['CSS','HTML'],
     },
     {
-      imagen:'v1641312702/blogPersonal/blogs/imagen_2022-01-04_111141_xnfrot.png',
+      imagen:'v1644351654/blogPersonal/blogs/imagen_2022-02-08_152052_bidpvw.png',
       alt: 'ahorcado',
       titulo: 'Juego de ahorcado',
       intro: 'Juego 100% responsive realizado en React ,enfatizando en la funcionalidad y no en su css.',

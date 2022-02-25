@@ -8,8 +8,8 @@
             span() URL : 
             a(:href="direccion") {{this.direccion}}
         section
-            div().tags Tags :
-            div().tagscontainer
+            div.tags Tags :
+            div.tagscontainer
                 tools(v-for="(tag, index) in tags" :key="index" :value="tag")
 </template>
 <script>

@@ -9,6 +9,7 @@ export default {
       darkmode: '',
       selected: true,
       root: null,
+      type: 'day',
     }
   },
   mounted() {

@@ -1,5 +1,5 @@
 <template lang="pug">
-    article(  :class="{ giro: backFace }")
+    article(:class="{ giro: backFace }")
         div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")  
             div(class="pageBorder" :style="{ display: `${pageBorder?'block':'none'}` }"  @click="backFace=!backFace")    
             nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  

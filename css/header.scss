@@ -24,9 +24,6 @@ header{
     align-self: center;
     display: flex;
     justify-content: space-evenly;
-    .facebook{
-        @include icons("~assets/img/facebookIcon.png");
-    }  
     .instagram{
         @include icons("~assets/img/instagramIcon.png");
     }

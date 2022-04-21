@@ -1,6 +1,6 @@
 export default {
   components: true,
-  target:'static',
+  target: 'static',
   // Target: https://go.nuxtjs.dev/config-target
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -9,16 +9,16 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image', href: '/favicon.jpg' }
-    ]
+      { rel: 'icon', type: 'image', href: '/favicon.jpg' },
+    ],
   },
-  image: {    
+  image: {
     cloudinary: {
-    baseURL: 'https://res.cloudinary.com/dl4ytevqi/image/upload/'
-  },
+      baseURL: 'https://res.cloudinary.com/dl4ytevqi/image/upload/',
+    },
     domains: ['https://i.imgur.com'],
     screens: {
       xs: 320,
@@ -27,23 +27,20 @@ export default {
       lg: 1024,
       xl: 1280,
       xxl: 1536,
-      '2xl': 1536
+      '2xl': 1536,
     },
-},
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/css/global.scss"],
+  css: ['@/css/global.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxt/image'
-  ],
+  buildModules: ['@nuxt/image'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -60,8 +57,8 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
-    }
+      lang: 'en',
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -70,8 +67,8 @@ export default {
       scss: { sourceMap: false },
     },
   },
-  loading:{
-    color:"#e6e9ed",
-    height:'5px'
-  }
+  loading: {
+    color: '#e6e9ed',
+    height: '5px',
+  },
 }

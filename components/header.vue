@@ -5,8 +5,6 @@
         section.header__About-me
             nuxt-link(v-bind:class="{'a--i':this.$route.path!=='/'}" :to="`/acercaDeMi`") Sobre mi    
         nav.header__icon-container
-            a(href="https://www.facebook.com/sebastian.povedaflorez")
-                span(class="facebook") 
             a(href="https://www.instagram.com/sebastianpovedaflorez/?hl=es-la") 
                 span(class="instagram")  
             a(href="https://www.linkedin.com/in/juan-sebastián-poveda-flórez-07b412212/") 

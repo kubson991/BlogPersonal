@@ -44,6 +44,10 @@ h2{
     overflow: visible;
     padding: 25px 0;
     overflow-y: hidden;
+    .astronauta{
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
 }
 .filter{
     margin-top: 1rem;
@@ -55,33 +59,20 @@ h2{
         padding: 0;
         margin: 0;
         text-indent: 1rem;
+        background-color: $color-gris;
+        color: $color-principal;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
     }
     .openFilter{
         width: 30%;
-        border: solid 2px black;
     }
     .closeFilter{
-        
-        border: solid 2px transparent;
         visibility: hidden;
     }
-    span{
-        font-family:$Fuente2;
-    }
-}
-
-
-@keyframes inputShow{
-    0% {
-        width: 0rem;
-        height: 3rem;
-        padding: 0;
-        border: none;
-        border: solid 3px transparent;
-
-    }
-    100% {
-        width: 50%;
-        border: solid 3px black;
-    }
+    // span{
+    //     font-family:$Fuente2;
+    //     color: $color-principal;
+    // }
 }

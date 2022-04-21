@@ -16,9 +16,9 @@ main
         p Actualmente soy desarrollador Front-End en Carvajal tecnología y servicios para el software de compra venta de facturas "Liquidez ya" .
     h2 Mis certificaciones
     .filter
-      span(@click='changeFilterState') si deseas buscar algo
+      span(@click='changeFilterState') {{firstFilterWord}}
       input(v-model='filtro', :class='filterState')
-      span(class="material-symbols-sharp" @click='changeFilterState') clickeame :)
+      span( @click='changeFilterState') {{secondFilterWord}}
     section.main__certificaciones
       nuxt-img.astronauta(
         v-if='filteredCertifications().length < 1',
@@ -38,7 +38,7 @@ export default {
   layout: 'blogs',
   data() {
     return {
-      firstFilterWord:'si deseas buscar algo',
+      firstFilterWord:'si deseas buscar algo ',
       secondFilterWord:'más especifico clickeame :)',
       filterClose: true,
       filtro: '',
@@ -125,11 +125,11 @@ export default {
     changeFilterState() {
       this.filterClose = !this.filterClose
       if (this.filterClose) {
-        this.firstFilterWord=''
+        this.firstFilterWord='si deseas buscar algo ' 
         this.secondFilterWord='más especifico clickeame :)'
       } else {
         this.firstFilterWord='Buscar :'
-        this.secondFilterWord=':)'
+        this.secondFilterWord=''
       }
     },
   },

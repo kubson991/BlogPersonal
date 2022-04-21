@@ -51,7 +51,11 @@ h2{
 }
 .filter{
     margin-top: 1rem;
-    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: start;
+    width: 90%;
+    margin: 20px auto 0 auto;
     input{
         transition: all 1s;
         width: 0rem;
@@ -64,15 +68,17 @@ h2{
         outline: none;
         border: none;
         border-radius: 0.5rem;
+
     }
     .openFilter{
         width: 30%;
+        margin-left: 0.5rem;
     }
     .closeFilter{
         visibility: hidden;
     }
-    // span{
-    //     font-family:$Fuente2;
-    //     color: $color-principal;
-    // }
+    span{
+        color: $color-principal;
+        margin: 0 0.5rem;
+    }
 }

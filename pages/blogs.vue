@@ -9,22 +9,22 @@
                     nuxt-link.boton-articulos(:to="`/blog/MiBlog`") Leer mas
             section.main__blogs
                 h2 Mis proyectos
-                div  
-                    Articles(v-for="article in articles" :article="article" :key="article.h1")     
+                div
+                    Articles(v-for="article in articles" :article="article" :key="article.h1")
 </template>
 <script>
 export default {
-    layout:'blogs',
-    name:'blogs',
-    data(){
-        return{
-            articles:[
-            ]
-        }
-    },
-    mounted(){
-        this.articles=this.$store.state.posts
-    }
+	layout:'blogs',
+	name:'blogs',
+	data(){
+		return{
+			articles:[
+			]
+		}
+	},
+	mounted(){
+		this.articles=this.$store.state.posts
+	}
 }
 
 </script>
@@ -38,14 +38,13 @@ export default {
                }
                 article{
                     width: 45%;
-                }   
-            }   
+                }
+            }
             .main__blogs{
                 div{
-                    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));    
+                    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
                 }
             }
         }
 </style>
 
- 

@@ -8,21 +8,21 @@
     height:fit-content;
     background-color: $color-gris;
     img{
-        margin: 20px 0;  
-        width: 65%; 
-        border-radius: 0.4em;      
+        margin: 20px 0;
+        width: 65%;
+        border-radius: 0.4em;
     }
     article{
         width: 90%;
         h1{
             text-align: center;
             color: $color-principal;
-        }   
+        }
         p{
             text-align: justify;
-            margin: 20px 0;  
+            margin: 20px 0;
             color: $color-secundario;
-        }   
+        }
     }
 }
 h2{
@@ -53,7 +53,7 @@ h2{
     margin-top: 1rem;
     display: flex;
     align-items:center;
-    justify-content: start;
+    justify-content: flex-start;
     width: 90%;
     margin: 20px auto 0 auto;
     input{

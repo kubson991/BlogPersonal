@@ -87,6 +87,7 @@ export default {
 				'v1635127844/blogPersonal/certificados/diploma-asincronismo-js-1_cs6czk.png',
 				'v1635127840/blogPersonal/certificados/diploma-animaciones-css-practico_1_-1_mjrpad.png',
 				'v1635127839/blogPersonal/certificados/diploma-animaciones-css-1_pxoiew.png',
+				'v1651163019/blogPersonal/certificados/learn_visual_estudio_code-1_kptlyk.png'
 			],
 		}
 	},

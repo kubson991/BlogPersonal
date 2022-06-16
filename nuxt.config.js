@@ -1,5 +1,9 @@
 export default {
 	target: 'static',
+	// server: {
+	// 	host: '0',
+	// 	port:'5000' // default: localhost
+	// },
 	// Target: https://go.nuxtjs.dev/config-target
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {

@@ -43,7 +43,9 @@ export default {
 			filterClose: true,
 			filtro: '',
 			certificaciones: [
+				'v1655389238/blogPersonal/certificados/the_complete_node.js_developer_course_3rd_editio_f48kn8.png',
 				'v1650048334/blogPersonal/certificados/Principios-solid-clean-code-escribe-codigo-de-calidad.png',
+				'v1651163019/blogPersonal/certificados/learn_visual_estudio_code-1_kptlyk.png',
 				'v1649717543/blogPersonal/certificados/diploma-expresiones-regulares_c3noiv.png',
 				'v1648219213/blogPersonal/certificados/diploma-reactividad-vuejs-1_xjs1td.png',
 				'v1644459324/blogPersonal/certificados/diploma-mongodb-1_ixlszn.png',

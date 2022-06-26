@@ -43,9 +43,9 @@ export default {
 			filterClose: true,
 			filtro: '',
 			certificaciones: [
-				'v1655389238/blogPersonal/certificados/the_complete_node.js_developer_course_3rd_editio_f48kn8.png',
-				'v1650048334/blogPersonal/certificados/Principios-solid-clean-code-escribe-codigo-de-calidad.png',
-				'v1651163019/blogPersonal/certificados/learn_visual_estudio_code-1_kptlyk.png',
+				'v1655389238/blogPersonal/certificados/the-complete-node.js-developer-course-3rd-edition.png',
+				'v1655391451/blogPersonal/certificados/principios-solid-clean-code-escribe-codigo-de-calidad_bmtnjo.png',
+				'v1651163019/blogPersonal/certificados/learn-visual-studio-code-(2020).png',
 				'v1649717543/blogPersonal/certificados/diploma-expresiones-regulares_c3noiv.png',
 				'v1648219213/blogPersonal/certificados/diploma-reactividad-vuejs-1_xjs1td.png',
 				'v1644459324/blogPersonal/certificados/diploma-mongodb-1_ixlszn.png',
@@ -89,7 +89,6 @@ export default {
 				'v1635127844/blogPersonal/certificados/diploma-asincronismo-js-1_cs6czk.png',
 				'v1635127840/blogPersonal/certificados/diploma-animaciones-css-practico_1_-1_mjrpad.png',
 				'v1635127839/blogPersonal/certificados/diploma-animaciones-css-1_pxoiew.png',
-				'v1651163019/blogPersonal/certificados/learn_visual_estudio_code-1_kptlyk.png'
 			],
 		}
 	},
@@ -114,15 +113,17 @@ export default {
 				}
 			}
 		},
+		formatFilter() {
+			const filtroMinusculas = this.filtro.toLowerCase()
+			const filtroFinal=filtroMinusculas.replace(/ /g, '-')
+			return filtroFinal
+		},
 	},
 	methods: {
-		formatFilter(filtro) {
-			const filtroMinusculas = filtro.toLowerCase()
-			return filtroMinusculas.replace(/\s/, '-')
-		},
+
 		filteredCertifications() {
 			return this.certificaciones.filter((word) =>
-				word.includes(this.formatFilter(this.filtro))
+				word.includes(this.formatFilter)
 			)
 		},
 		changeFilterState() {

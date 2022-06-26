@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-    name:'headerB',    
+	name:'headerB',    
 }
 </script>
 <style lang="scss" scoped>

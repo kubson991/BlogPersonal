@@ -9,15 +9,15 @@
 </template>
 <script>
 export default {
-    layout:'post',
-    data(){
-        return{
-            blog:{}
-        }
-    } ,  
-    created(){
-        this.blog=this.$store.getters.get(this.$route.params.blogs)
-    }
+	layout:'post',
+	data(){
+		return{
+			blog:{}
+		}
+	} ,  
+	created(){
+		this.blog=this.$store.getters.get(this.$route.params.blogs)
+	}
 }
 </script>
 <style lang="scss" scoped>

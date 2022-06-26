@@ -14,14 +14,14 @@
 </template>
 <script>
 export default {
-    name:'main_blog',
-    props:{
-        img:'',
-        h1:"",
-        pre:"",
-        tags:[],
-        direccion:'',
-    },
+	name:'main_blog',
+	props:{
+		img:'',
+		h1:'',
+		pre:'',
+		tags:[],
+		direccion:'',
+	},
 }
 </script>
 <style lang="scss" scoped>

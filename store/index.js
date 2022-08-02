@@ -222,6 +222,16 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
 			direccion:'https://resilient-griffin-12d934.netlify.app',
 			tags:['CSS','HTML','JS','Node','React','RWD','Vite'],
 		},
+		{
+			imagen:'v1659408199/blogPersonal/blogs/imagen_2022-08-01_214315912_zvye3u.png',
+			alt: 'Rock,Paper,Scissors....',
+			titulo: 'Rock,Paper,Scissors....',
+			intro: 'Clasico juego de piedra,papel y tijera MAS spock y lagarto realizado con React y Vite ,enfatizado en su version mobile.',
+			blog: 'Rock,Paper,Scissors....',
+			post: 'Clasico juego de piedra,papel y tijera MAS spock y lagarto realizado con React y Vite ,enfatizado en su version mobile ,siguiendo manejo de efectos asincronos y multiples estados simulataneos,agregando la belleza del uso del preprocesador SASS',
+			direccion:'https://62e88e169428a6660bf9051b--stirring-peony-69f790.netlify.app',
+			tags:['CSS','HTML','JS','Node','React','RWD','Vite'],
+		},
 	],
 	darkMode:false
 })

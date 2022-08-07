@@ -279,7 +279,8 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
         'Aplicacion web que muestra todos los paises del mundo con toda su informacion desarrollado con React y Vite.',
       blog: 'Where in the world',
       post: 'Aplicacion web que muestra todos los paises del mundo con toda su informacion desarrollado con React y Vite ,cuenta con filtros por nombre o continente ademas de acceso a otros paises mediante la informacion de su frontera,increiblemente eficiente gracias a el empleo de Redux y tambien su implementacion de react Router con una facinante herramienta para leer query params.',
-      direccion: '',
+      direccion:
+        'https://62ef5b6a13baf85c2d59fcd7--grand-cupcake-d5668c.netlify.app',
       tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Redux'],
     },
   ],

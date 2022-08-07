@@ -13,21 +13,23 @@
 </template>
 <script>
 export default {
-    name:"articles",
-    data(){
-        return{
-            pageBorder:false,
-            backFace:false,
-        }
-    },
-    props:{
-        article:Object
-    },
+	name: 'articles',
+	data() {
+		return {
+			pageBorder: false,
+			backFace: false,
+		}
+	},
+	props: {
+		article: Object,
+	},
 }
 </script>
 <style lang="scss" scoped>
-    @import "../css/article.scss";
-    @media(min-width: 1028px){
-        article{height: 500px;}        
-    }
+@import '../css/article.scss';
+@media (min-width: 1028px) {
+  article {
+    height: 500px;
+  }
+}
 </style>

@@ -75,6 +75,10 @@ export default {
         this.background = '#764abc'
         this.color = 'white'
         break
+      case 'Ps':
+        this.background = '#001e36'
+        this.color = '#2e9de8'
+        break
       default:
         break
     }

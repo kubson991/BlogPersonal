@@ -283,6 +283,18 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
         'https://62ef5b6a13baf85c2d59fcd7--grand-cupcake-d5668c.netlify.app',
       tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Redux'],
     },
+    {
+      imagen:
+        'v1660429160/blogPersonal/blogs/imagen_2022-08-13_171918826_errajy.png',
+      alt: 'male or female',
+      titulo: 'Male or female',
+      intro:
+        'Aplicacion web que consume un API que predice el sexo del nombre que se inserta.',
+      blog: 'Male or female',
+      post: 'Aplicacion web que consume un API que predice el sexo del nombre que se inserta ,creada mediante React y Vite, lo que mas destaca es la animacion de css de la balance que se logra mediante la insercion de la base y brazos de la balanza como imagens independientes logradas con photoshop',
+      direccion: 'https://fluffy-pudding-2c443d.netlify.app',
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Jest', 'Ps'],
+    },
   ],
   darkMode: false,
 })

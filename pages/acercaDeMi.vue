@@ -43,6 +43,7 @@ export default {
       filterClose: true,
       filtro: '',
       certificaciones: [
+        'v1662407476/blogPersonal/certificados/React:De-cero-a-experto(Hooks-y-MERN).png',
         'v1655389238/blogPersonal/certificados/the-complete-node.js-developer-course-3rd-edition.png',
         'v1655391451/blogPersonal/certificados/principios-solid-clean-code-escribe-codigo-de-calidad_bmtnjo.png',
         'v1651163019/blogPersonal/certificados/learn-visual-studio-code-(2020).png',

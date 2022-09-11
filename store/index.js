@@ -295,6 +295,18 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       direccion: 'https://fluffy-pudding-2c443d.netlify.app',
       tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Jest', 'Ps'],
     },
+    {
+      imagen:
+        'v1662868595/blogPersonal/blogs/imagen_2022-09-10_225632633_ebewlo.png',
+      alt: 'CreditCardForm',
+      titulo: 'Credit card Form',
+      intro:
+        'Sencilla pagina que puede ser componetizada que muestra un Form de datos para tarjeta de credito con sus respectivas validaciones y visualizador grafico de dichos datos.',
+      blog: 'Credit card Form',
+      post: 'Sencilla pagina que puede ser componetizada que muestra un Form de datos para tarjeta de credito con sus respectivas validaciones y visualizador grafico de dichos datos,realizada con ReactJs para dispositivos moviles y de escritorio.',
+      direccion: 'https://splendid-yeot-fc8861.netlify.app',
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite'],
+    },
   ],
   darkMode: false,
 })

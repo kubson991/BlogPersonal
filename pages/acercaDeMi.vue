@@ -38,7 +38,7 @@ export default {
   layout: 'blogs',
   data() {
     return {
-      firstFilterWord: 'si deseas buscar algo ',
+        firstFilterWord: 'si deseas buscar algo ',
       secondFilterWord: 'más especifico clickeame :)',
       filterClose: true,
       filtro: '',

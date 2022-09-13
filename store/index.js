@@ -303,9 +303,9 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       intro:
         'Sencilla pagina que puede ser componetizada que muestra un Form de datos para tarjeta de credito con sus respectivas validaciones y visualizador grafico de dichos datos.',
       blog: 'Credit card Form',
-      post: 'Sencilla pagina que puede ser componetizada que muestra un Form de datos para tarjeta de credito con sus respectivas validaciones y visualizador grafico de dichos datos,realizada con ReactJs para dispositivos moviles y de escritorio.',
+      post: 'Sencilla pagina que puede ser componetizada que muestra un Form de datos para tarjeta de credito con sus respectivas validaciones y visualizador grafico de dichos datos,realizada con ReactJs para dispositivos moviles y de escritorio (pruebas te integracion implementadas con JEST).',
       direccion: 'https://splendid-yeot-fc8861.netlify.app',
-      tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite'],
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Jest'],
     },
   ],
   darkMode: false,

@@ -2,18 +2,19 @@
 main
   div
     section.main__perfil
-      nuxt-img(
-        src='v1635132021/blogPersonal/foto_de_mi_dukgol.jpg',
-        alt='blog',
-        provider='cloudinary',
-        format='webp'
-      )
+      div.linkBatch
+        div(v-show="darkTheme" class="badge-base LI-profile-badge big" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="juan-sebastian-poveda-florez" data-version="v1")
+          a(class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/juan-sebastian-poveda-florez?trk=profile-badge")
+        div(v-show="!darkTheme" class="badge-base LI-profile-badge bigL" data-locale="es_ES" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="juan-sebastian-poveda-florez" data-version="v1")
+          a(class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/juan-sebastian-poveda-florez?trk=profile-badge")
+           
       article
         h1 ¿Quién soy?
         p Ingeniero de sistemas egresado de la Universidad Autónoma de Bucaramanga con nivel intermedio de inglés y buenas aptitudes en el trabajo colaborativo.
         p Soy una persona responsable, puntual, autodidacta, creativa y con muy buena disposición para cualquier tarea que se me asigne.
         p Me interesa principalmente trabajar en proyectos nuevos y con un enfoque social, en el área de desarrollo web principalmente como Frontend developer.
         p Actualmente soy desarrollador Front-End en Carvajal tecnología y servicios para el software de compra venta de facturas "Liquidez ya" .
+                  
     h2 Mis certificaciones
     .filter
       span(@click='changeFilterState') {{firstFilterWord}}
@@ -36,6 +37,18 @@ main
 <script>
 export default {
   layout: 'blogs',
+  head() {
+    return {
+      script: [
+        {
+          src: 'https://platform.linkedin.com/badges/js/profile.js',
+          async: true,
+          defer: true,
+          type: 'text/javascript',
+        },
+      ],
+    }
+  },
   data() {
     return {
       firstFilterWord: 'si deseas buscar algo ',
@@ -120,11 +133,14 @@ export default {
       const filtroFinal = filtroMinusculas.replace(/ /g, '-')
       return filtroFinal
     },
+    darkTheme() {
+      return this.$store.state.darkMode
+    },
   },
   methods: {
     filteredCertifications() {
       return this.certificaciones.filter((word) =>
-        word.includes(this.formatFilter)
+        word.toLowerCase().includes(this.formatFilter)
       )
     },
     changeFilterState() {
@@ -164,6 +180,10 @@ export default {
       width: 40%;
       margin: 0 auto 0 auto;
     }
+  }
+  .filter .openFilter {
+    width: 30%;
+    margin-left: 0.5rem;
   }
 }
 </style>

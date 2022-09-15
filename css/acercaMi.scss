@@ -1,84 +1,90 @@
-@import "./config.scss";
-.main__perfil{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 60px;
-    height:fit-content;
+@import './config.scss';
+.big {
+  margin-top: 4rem;
+}
+.bigL {
+  margin: 3rem 0;
+}
+
+.main__perfil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  height: fit-content;
+  background-color: $color-gris;
+  img {
+    margin: 20px 0;
+    width: 65%;
+    border-radius: 0.4em;
+  }
+  article {
+    width: 90%;
+    h1 {
+      text-align: center;
+      color: $color-principal;
+    }
+    p {
+      text-align: justify;
+      margin: 20px 0;
+      color: $color-secundario;
+    }
+  }
+}
+h2 {
+  text-align: center;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  border-bottom: solid 1px $color-gris;
+  color: $color-principal;
+}
+
+.main__certificaciones {
+  width: 98%;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-gap: 20px 15px;
+  overflow: visible;
+  padding: 25px 0;
+  overflow-y: hidden;
+  .astronauta {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+}
+.filter {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  input {
+    transition: all 1s;
+    width: 0rem;
+    height: 3rem;
+    padding: 0;
+    margin: 0;
+    text-indent: 1rem;
     background-color: $color-gris;
-    img{
-        margin: 20px 0;
-        width: 65%;
-        border-radius: 0.4em;
-    }
-    article{
-        width: 90%;
-        h1{
-            text-align: center;
-            color: $color-principal;
-        }
-        p{
-            text-align: justify;
-            margin: 20px 0;
-            color: $color-secundario;
-        }
-    }
-}
-h2{
-    text-align: center;
-    width: 90%;
-    margin: 20px auto 0 auto;
-    border-bottom: solid 1px $color-gris;
     color: $color-principal;
-}
-
-.main__certificaciones{
-    width: 98%;
-    margin: auto;
-    position: relative;
-    display: grid;
-    grid-auto-rows:auto;
-    grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
-    grid-gap: 20px 15px;
-    overflow: visible;
-    padding: 25px 0;
-    overflow-y: hidden;
-    .astronauta{
-        width: 100%;
-        margin: 0 auto 0 auto;
-    }
-}
-.filter{
-    margin-top: 1rem;
-    display: flex;
-    align-items:center;
-    justify-content: flex-start;
-    width: 90%;
-    margin: 20px auto 0 auto;
-    input{
-        transition: all 1s;
-        width: 0rem;
-        height: 3rem;
-        padding: 0;
-        margin: 0;
-        text-indent: 1rem;
-        background-color: $color-gris;
-        color: $color-principal;
-        outline: none;
-        border: none;
-        border-radius: 0.5rem;
-
-    }
-    .openFilter{
-        width: 30%;
-        margin-left: 0.5rem;
-    }
-    .closeFilter{
-        visibility: hidden;
-    }
-    span{
-        color: $color-principal;
-        margin: 0 0.5rem;
-    }
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .openFilter {
+    width: 70%;
+    margin-left: 0.5rem;
+  }
+  .closeFilter {
+    visibility: hidden;
+  }
+  span {
+    color: $color-principal;
+    margin: 0 0.5rem;
+  }
 }

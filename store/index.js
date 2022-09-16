@@ -307,6 +307,18 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       direccion: 'https://splendid-yeot-fc8861.netlify.app',
       tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'RWD', 'Vite', 'Jest'],
     },
+    {
+      imagen:
+        'v1663344492/blogPersonal/blogs/imagen_2022-09-16_110810372_bgh6bl.png',
+      alt: 'photoEditor',
+      titulo: 'Photo Editor',
+      intro:
+        'Editor de imagenes que pueden ser subidas y descargadas sin perder calidad realizado en React ,siendo llamativo que solo hace uso de Front para su implementacion',
+      blog: 'PhotoEditor',
+      post: 'Editor de imagenes que pueden ser subidas y descargadas sin perder calidad realizado en React ,siendo llamativo que solo hace uso de Front para su implementacion y es que el uso de canvas es sencial para la edicion de la misma ya que sin implementacion de Back una imagen solo puede ser editada y descargada ,dibujandola en un canvas y modificarla,tambien siendo importante recalcar que su uso solo es apto para equipos de escritorio.',
+      direccion: 'https://mellifluous-blini-8578f9.netlify.app',
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'Vite'],
+    },
   ],
   darkMode: false,
 })

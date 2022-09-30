@@ -1,46 +1,78 @@
-@import "./config.scss";
+@import './config.scss';
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-html{
-    font-size: 62.5%;
-    width: 100vw;
-    max-width:100%
+html {
+  font-size: 62.5%;
+  width: 100vw;
+  max-width: 100%;
 }
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 1.6rem;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
 }
-body{
-    font-family: $Fuente2;
-    background-color: $color-claro;
+body {
+  font-family: $Fuente2;
+  background-color: $color-claro;
+  transition: background-color 1s ease-in;
 }
-main{
-    min-height: 69vh;    
+p {
+  transition: background-color 1s ease-in;
 }
-h1{
-    font-size: 1.2em;
+div {
+  transition: background-color 1s ease-in;
 }
-h2{
-    font-size: 1.1em;
+main {
+  min-height: 69vh;
 }
-a{
-    color: $color-variacion;
-    &:hover{
-        color: $color-variacionTrasparente;
-    }
+h1 {
+  font-size: 1.2em;
+  transition: background-color 1s ease-in;
 }
-body::-webkit-scrollbar {
-    width: 10px;
-    background-color: $color-gris
+h2 {
+  font-size: 1.1em;
+  transition: background-color 1s ease-in;
+}
+section {
+  transition: background-color 1s ease-in;
+}
+a {
+  color: $color-variacion;
+  &:hover {
+    color: $color-variacionTrasparente;
   }
+}
+
+@keyframes newIMG {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  animation-name: newIMG;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: unset;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: $color-gris;
+}
 body::-webkit-scrollbar-thumb {
-    background: $color-variacion;
-    border-radius: 4px;
+  background: $color-variacion;
+  border-radius: 4px;
 }
 @media (min-width: 1600px) {
-    *{
-        font-size: 2.2rem;
-    }
+  * {
+    font-size: 2.2rem;
+  }
 }

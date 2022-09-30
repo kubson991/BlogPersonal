@@ -174,6 +174,12 @@ export default {
   }
 }
 @media (min-width: 1550px) {
+  p {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
   .main__certificaciones {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     .astronauta {

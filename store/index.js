@@ -319,6 +319,18 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       direccion: 'https://mellifluous-blini-8578f9.netlify.app',
       tags: ['CSS', 'HTML', 'JS', 'Node', 'React', 'Vite'],
     },
+    {
+      imagen:
+        'v1664551406/blogPersonal/blogs/imagen_2022-09-30_102324987_e9jey3.png',
+      alt: 'MDBAPP',
+      titulo: 'Index de Movie App',
+      intro:
+        'Visualizador de peliculas en cartelera realizdo con VueJS y NuxtJS que filtra por popularidad y nombre y tambien agrega a favoritos mediante uso del store y con animaciones imporesionantes principalmente para el modal.',
+      blog: 'MDBAPP',
+      post: 'Visualizador de peliculas en cartelera realizdo con VueJS y NuxtJS que filtra por popularidad y nombre y tambien agrega a favoritos mediante uso del store y con animaciones imporesionantes principalmente para el modal ,recalcando el consumo de la API de movieDB',
+      direccion: 'https://clever-klepon-fde927.netlify.app',
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'PWA', 'Storage','Nuxt','Vue'],
+    },
   ],
   darkMode: false,
 })

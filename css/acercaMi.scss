@@ -14,6 +14,7 @@
   margin-top: 60px;
   height: fit-content;
   background-color: $color-gris;
+  padding: 1rem 0;
   img {
     margin: 20px 0;
     width: 65%;
@@ -30,6 +31,7 @@
       text-align: justify;
       margin: 20px 0;
       color: $color-secundario;
+      font-weight: 500;
     }
   }
 }
@@ -80,6 +82,8 @@ h2 {
   .openFilter {
     width: 70%;
     margin-left: 0.5rem;
+    caret-color: $color-variacion;
+    font-size: 80%;
   }
   .closeFilter {
     visibility: hidden;

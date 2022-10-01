@@ -1,28 +1,28 @@
-@import "../css/config.scss";
-.main__correo{
-    width: 100%;
-    background-color: $color-gris; 
+@import '../css/config.scss';
+.main__correo {
+  width: 100%;
+  background-color: $color-gris;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+  img {
+    width: 70px;
+    margin-left: 30px;
+  }
+  div {
     display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    height: 70px;
-    img{
-        width: 70px;
-        margin-left: 30px;    
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-left: 10px;
+    a {
+      color: $color-variacion;
+      cursor: url('https://i.imgur.com/MOBuBm9.png'), auto;
     }
-    div{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-        margin-left: 10px;
-        a{
-            color: $color-variacion;
-        }
-        p{
-            margin: unset;
-            color: $color-secundario;
-        }
+    p {
+      margin: unset;
+      color: $color-secundario;
     }
-
+  }
 }

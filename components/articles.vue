@@ -1,13 +1,13 @@
 <template lang="pug">
     article( @mousemove="getCursorDirection" ref="article" :style="transformPosition")
         div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")  
-            div(class="pageBorder" :style="{ display: `${pageBorder?'block':'none'}` }"  @click="backFace=!backFace")    
+            div(class="pageBorder" :class="{ show:pageBorder ,hidden:!pageBorder }"  @click="backFace=!backFace")    
             nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  
             h1 {{article.titulo}}
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
         div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")
-            div(class="pageBorder back" :style="{ display: `${pageBorder?'block':'none'}` }" @click="backFace=!backFace" ) 
+            div(class="pageBorder back" :class="{ show:pageBorder , hidden:!pageBorder }" @click="backFace=!backFace" ) 
             div.tagsContainer
                 tools(v-for="(tag, index) in article.tags" :key="index" :value="tag")
 </template>
@@ -34,6 +34,9 @@ export default {
         return ''
       }
       const element = this.$refs.article
+      if (!element) {
+        return ''
+      }
       const halfY =
         element.getBoundingClientRect().top + element.offsetHeight / 2
       const halfX = element.offsetLeft + element.offsetWidth / 2

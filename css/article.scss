@@ -8,7 +8,24 @@
     right: 0;
   }
 }
+@keyframes showDobles {
+  from {
+    width: 0rem;
+    height: 0rem;
+  }
+  to {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 
+.show {
+  animation-name: showDobles;
+  display: block;
+}
+.hidden {
+  display: none;
+}
 article::before {
   content: ' ';
   position: absolute;
@@ -25,6 +42,7 @@ article::before {
   backface-visibility: hidden;
 }
 article {
+  box-shadow: 0px 15px 25px -20px $color-variacion;
   animation-name: spawn;
   animation-duration: 1.2s;
   animation-timing-function: ease-out;
@@ -98,10 +116,19 @@ article {
     position: absolute;
     top: 0;
     right: 0;
-    border-left: 1px solid rgba(128, 128, 128, 0.274);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.274);
+    // border-left: 1px solid rgba(128, 128, 128, 0.274);
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.274);
     cursor: pointer;
     transform-style: preserve-3d;
+    border: unset;
+
+    animation-name: showDobles;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: unset;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
   }
   .back {
     background-image: url('https://i.imgur.com/y5Bb3B4.gif');
@@ -117,8 +144,9 @@ article {
     transform-origin: 100% 100%;
     transform: rotate(45deg);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.274);
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.274);
     transform-style: preserve-3d;
+    cursor: default;
   }
   .tagsContainer {
     position: absolute;

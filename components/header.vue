@@ -14,19 +14,22 @@
 </template>
 <script>
 export default {
-	name:'headerB',    
+  name: 'headerB',
 }
 </script>
 <style lang="scss" scoped>
-    @import "../css/header.scss";
-    @media (min-width: 1024px) {
-        .header__icon-container{
-            width: 35%;
-        }       
-    }
-    @media(min-width: 1440px){
-        .header__icon-container{
-            width: 25%;
-        } 
-    }      
+@import '../css/header.scss';
+@media (min-width: 1024px) {
+  .header__icon-container {
+    width: 35%;
+  }
+}
+@media (min-width: 1440px) {
+  .header__icon-container {
+    width: 25%;
+  }
+  a.nuxt-link-exact-active {
+    font-size: 2.2rem;
+  }
+}
 </style>

@@ -56,6 +56,8 @@ export default {
       filterClose: true,
       filtro: '',
       certificaciones: [
+        'v1669139010/blogPersonal/certificados/diploma-angular-componentes-y-servicios.png',
+        'v1664854039/blogPersonal/certificados/Electron-from-scratch:build-desktop-apps-with-javascript.png',
         'v1663201418/blogPersonal/certificados/Adobe-Photoshop-CC:Curso-Completo-de-Principiante-a-Experto.png',
         'v1662407476/blogPersonal/certificados/React:De-cero-a-experto(Hooks-y-MERN).png',
         'v1655389238/blogPersonal/certificados/the-complete-node.js-developer-course-3rd-edition.png',

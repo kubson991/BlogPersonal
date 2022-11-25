@@ -23,13 +23,30 @@ export default {
       transformY: 0,
       turnOround: false,
       stopMotion: false,
+            window: {
+        width: 0,
+        height: 0
+      },
     }
   },
   props: {
     article: Object,
   },
+  mounted(){
+    window.addEventListener('resize', this.handleResize);
+  },
+  destroyed(){
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
+        handleResize () {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+    },
     getCursorDirection(e) {
+      if (this.window.width < 800) {
+        return ''
+      }
       if (this.stopMotion) {
         return ''
       }

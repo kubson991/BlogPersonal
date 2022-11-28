@@ -32,8 +32,10 @@ export default {
   props: {
     article: Object,
   },
-  mounted(){
+  created(){
     window.addEventListener('resize', this.handleResize);
+    this.window.width=window.innerWidth
+    this.window.height=window.innerHeight
   },
   destroyed(){
     window.removeEventListener('resize', this.handleResize);
@@ -44,6 +46,7 @@ export default {
       this.window.height = window.innerHeight;
     },
     getCursorDirection(e) {
+      console.log(this.window.width )
       if (this.window.width < 800) {
         return ''
       }

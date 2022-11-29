@@ -23,7 +23,7 @@ export default {
       transformY: 0,
       turnOround: false,
       stopMotion: false,
-            window: {
+      window: {
         width: 0,
         height: 0
       },
@@ -46,7 +46,6 @@ export default {
       this.window.height = window.innerHeight;
     },
     getCursorDirection(e) {
-      console.log(this.window.width )
       if (this.window.width < 800) {
         return ''
       }

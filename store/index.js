@@ -329,7 +329,19 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       blog: 'MDBAPP',
       post: 'Visualizador de peliculas en cartelera realizdo con VueJS y NuxtJS que filtra por popularidad y nombre y tambien agrega a favoritos mediante uso del store y con animaciones imporesionantes principalmente para el modal ,recalcando el consumo de la API de movieDB',
       direccion: 'https://clever-klepon-fde927.netlify.app',
-      tags: ['CSS', 'HTML', 'JS', 'Node', 'PWA', 'Storage','Nuxt','Vue'],
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'PWA', 'Storage', 'Nuxt', 'Vue'],
+    },
+    {
+      imagen:
+        'v1670696843/blogPersonal/blogs/imagen_2022-12-10_132721467_scdkn0.png',
+      alt: 'Angular',
+      titulo: 'Calculadora multi estilo',
+      intro:
+        'Calculadora pensada principalmente para mobile multiplataforma que destaca por su cambio de temas mostrando la belleza de la implementacion de buenas practicas en el uso de variables de CSS ,realizado en Angular.',
+      blog: 'Calculator',
+      post: 'Calculadora pensada principalmente para mobile multiplataforma que destaca por su cambio de temas mostrando la belleza de la implementacion de buenas practicas en el uso de variables de CSS ,realizado en Angular.',
+      direccion: 'https://curious-marshmallow-3e8d96.netlify.app',
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'Angular', 'RWD'],
     },
   ],
   darkMode: false,

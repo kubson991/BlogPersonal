@@ -79,6 +79,10 @@ export default {
         this.background = '#001e36'
         this.color = '#2e9de8'
         break
+      case 'Angular':
+        this.background = '#dc0030'
+        this.color = '#ffffff'
+        break
       default:
         break
     }

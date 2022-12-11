@@ -5,8 +5,6 @@
             div(class="pageBorder" :class="{ show:pageBorder ,hidden:!pageBorder }"  @click="backFace=!backFace")    
             nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  
             h1 {{article.titulo}}
-            h2 {{event.beta}}
-            h2 {{event.alpha}}
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
         div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")
@@ -28,36 +26,25 @@ export default {
       stopMotion: false,
       window: {
         width: 0,
-        height: 0,
+        height: 0
       },
-      event: {},
     }
   },
   props: {
     article: Object,
   },
-  created() {
-    window.addEventListener('resize', this.handleResize)
-    window.addEventListener('deviceorientation', this.handleMove)
-    this.window.width = window.innerWidth
-    this.window.height = window.innerHeight
+  created(){
+    window.addEventListener('resize', this.handleResize);
+    this.window.width=window.innerWidth
+    this.window.height=window.innerHeight
   },
-  unmounted() {
-    window.removeEventListener('resize', this.handleResize)
-    window.removeEventListener('deviceorientation', this.handleMove)
+  unmounted(){
+    window.removeEventListener('resize', this.handleResize);
   },
   methods: {
-    handleMove(event) {
-      this.event = event
-      console.log(event.alphha)
-      console.log('FRENTE Y DETRAS')
-      console.log(event.beta)
-      console.log('LADOS')
-      console.log(event.gamma)
-    },
-    handleResize() {
-      this.window.width = window.innerWidth
-      this.window.height = window.innerHeight
+        handleResize () {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
     },
     getCursorDirection(e) {
       if (this.window.width < 800) {
@@ -141,7 +128,6 @@ export default {
           transform: `rotateX(${this.transformX}deg) rotateY(${this.transformY}deg)`,
         }
       } else if (this.backFace) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.turnOround = false
         return {
           transform: `rotateX(${this.transformX}deg) rotateY(${

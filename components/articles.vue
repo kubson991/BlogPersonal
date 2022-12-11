@@ -5,6 +5,8 @@
             div(class="pageBorder" :class="{ show:pageBorder ,hidden:!pageBorder }"  @click="backFace=!backFace")    
             nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  
             h1 {{article.titulo}}
+            h2 {{event.beta}}
+            h2 {{event.alpha}}
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
         div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")
@@ -28,6 +30,7 @@ export default {
         width: 0,
         height: 0,
       },
+      event: {},
     }
   },
   props: {
@@ -45,6 +48,7 @@ export default {
   },
   methods: {
     handleMove(event) {
+      this.event = event
       console.log(event.alphha)
       console.log('FRENTE Y DETRAS')
       console.log(event.beta)

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <template lang="pug">
     article( @mousemove="getCursorDirection" ref="article" :style="transformPosition")
         div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")  
@@ -25,25 +26,34 @@ export default {
       stopMotion: false,
       window: {
         width: 0,
-        height: 0
+        height: 0,
       },
     }
   },
   props: {
     article: Object,
   },
-  created(){
-    window.addEventListener('resize', this.handleResize);
-    this.window.width=window.innerWidth
-    this.window.height=window.innerHeight
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    window.addEventListener('deviceorientation', this.handleMove)
+    this.window.width = window.innerWidth
+    this.window.height = window.innerHeight
   },
-  destroyed(){
-    window.removeEventListener('resize', this.handleResize);
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize)
+    window.removeEventListener('deviceorientation', this.handleMove)
   },
   methods: {
-        handleResize () {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
+    handleMove(event) {
+      console.log(event.alphha)
+      console.log('FRENTE Y DETRAS')
+      console.log(event.beta)
+      console.log('LADOS')
+      console.log(event.gamma)
+    },
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
     },
     getCursorDirection(e) {
       if (this.window.width < 800) {
@@ -103,8 +113,11 @@ export default {
   computed: {
     transformPosition() {
       if (this.backFace && this.turnOround) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.turnOround = false
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.stopMotion = true
+        // eslint-disable-next-line vue/no-async-in-computed-properties
         setTimeout(this.unlockMotion, 1800)
         return {
           transition: 'all 2s ease',
@@ -113,14 +126,18 @@ export default {
           }deg)`,
         }
       } else if (!this.backFace && this.turnOround) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.turnOround = false
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.stopMotion = true
+        // eslint-disable-next-line vue/no-async-in-computed-properties
         setTimeout(this.unlockMotion, 1800)
         return {
           transition: 'all 2s ease',
           transform: `rotateX(${this.transformX}deg) rotateY(${this.transformY}deg)`,
         }
       } else if (this.backFace) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.turnOround = false
         return {
           transform: `rotateX(${this.transformX}deg) rotateY(${

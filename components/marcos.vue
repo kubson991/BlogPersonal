@@ -1,3 +1,5 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable vue/multi-word-component-names -->
 <template lang="pug">
 div.M1
     div.M2
@@ -10,8 +12,10 @@ div.M1
 import download from '@/components/downloadsMasks/circleDownload.vue'
 export default {
     components:{download},
+    // eslint-disable-next-line vue/multi-word-component-names
     name:'marco',
     props:{
+        // eslint-disable-next-line vue/require-prop-type-constructor
         certificacion:''
     },  
     data(){

@@ -329,7 +329,7 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       blog: 'MDBAPP',
       post: 'Visualizador de peliculas en cartelera realizdo con VueJS y NuxtJS que filtra por popularidad y nombre y tambien agrega a favoritos mediante uso del store y con animaciones imporesionantes principalmente para el modal ,recalcando el consumo de la API de movieDB',
       direccion: 'https://clever-klepon-fde927.netlify.app',
-      tags: ['CSS', 'HTML', 'JS', 'Node', 'PWA', 'Storage', 'Nuxt', 'Vue'],
+      tags: ['CSS', 'HTML', 'JS', 'Node', 'PWA', 'Storage', 'Nuxt', 'Vue', 'RWD'],
     },
     {
       imagen:

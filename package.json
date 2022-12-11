@@ -1,5 +1,5 @@
 {
-  "name": "BlogPersonal",
+  "name": "blog_personal",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",

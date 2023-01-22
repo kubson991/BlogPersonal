@@ -52,5 +52,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5rem 0;
+    perspective: 4000px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
   }
 }

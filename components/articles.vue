@@ -67,15 +67,15 @@ export default {
         transformX =
           ((e.y - halfY) /
             (element.offsetHeight +
-              element.getBoundingClientRect().top -
+              element.getBoundingClientRect().top +
               halfY)) *
           12
       } else if (e.y < halfY) {
         transformX =
           ((e.y - halfY) /
             (element.getBoundingClientRect().top +
-              element.offsetHeight -
-              halfY)) *
+              element.offsetHeight 
+              )) *
           12
       }
       if (e.x < halfX) {
@@ -128,6 +128,7 @@ export default {
           transform: `rotateX(${this.transformX}deg) rotateY(${this.transformY}deg)`,
         }
       } else if (this.backFace) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.turnOround = false
         return {
           transform: `rotateX(${this.transformX}deg) rotateY(${

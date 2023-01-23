@@ -26,21 +26,18 @@
 .hidden {
   display: none;
 }
-article::before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: url('https://i.imgur.com/y5Bb3B4.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.97;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
+// article::before {
+//   content: ' ';
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+
+//   opacity: 0.97;
+//   transform-style: preserve-3d;
+//   backface-visibility: hidden;
+// }
 article {
   box-shadow: 0px 15px 25px -20px $color-variacion;
   animation-name: spawn;
@@ -53,15 +50,18 @@ article {
 
   position: relative;
   right: 200vw;
-  perspective: 150rem;
+  perspective: 250rem;
   width: 90%;
   height: 450px;
   margin: 10px auto;
   position: relative;
   z-index: 2;
   transform-style: preserve-3d;
+  perspective-origin: center;
   .containerF {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -69,18 +69,23 @@ article {
     align-items: center;
     justify-content: space-evenly;
     z-index: 2;
-    backface-visibility: hidden;
+    backface-visibility: visible;
     box-shadow: -8px 3px 8px -5px rgba(50, 50, 50, 0.32);
     transition: all 2s;
+    transform: translateZ(40px);
+    background-image: url('https://i.imgur.com/y5Bb3B4.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .containerB {
     position: absolute;
     width: 100%;
     height: 100%;
     transform: rotateY(180deg);
-    backface-visibility: hidden;
+    backface-visibility: visible;
     box-shadow: -8px 3px 8px -5px rgba(50, 50, 50, 0.32);
-    z-index: 10;
+    z-index: 1;
     background-image: url('https://i.pinimg.com/originals/21/5c/7f/215c7fdca6033092baa04b35c17466bd.gif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,44 +114,8 @@ article {
     @include botonBlogs();
     color: white;
   }
-  .pageBorder {
-    width: 5rem;
-    height: 5rem;
-    background-image: url('https://i.pinimg.com/originals/21/5c/7f/215c7fdca6033092baa04b35c17466bd.gif');
-    position: absolute;
-    top: 0;
-    right: 0;
-    // border-left: 1px solid rgba(128, 128, 128, 0.274);
-    // border-bottom: 1px solid rgba(128, 128, 128, 0.274);
-    cursor: pointer;
-    transform-style: preserve-3d;
-    border: unset;
-
-    animation-name: showDobles;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-iteration-count: unset;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-  }
   .back {
     background-image: url('https://i.imgur.com/y5Bb3B4.gif');
-  }
-  .pageBorder::before {
-    content: ' ';
-    background-color: $color-claro;
-    position: absolute;
-    height: 4rem;
-    width: 7.07rem;
-    bottom: 0;
-    right: 0;
-    transform-origin: 100% 100%;
-    transform: rotate(45deg);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    // border-bottom: 1px solid rgba(128, 128, 128, 0.274);
-    transform-style: preserve-3d;
-    cursor: default;
   }
   .tagsContainer {
     position: absolute;
@@ -163,4 +132,42 @@ article {
     row-gap: 5rem;
     column-gap: 2rem;
   }
+}
+
+.leftSide{
+  position: absolute;
+  display: block;
+background-color: #3a304f;
+  width: 42px;
+  height: 100%;
+  transform: rotateY(-90deg) translateZ(21px) translateX(21px) ;
+}
+.rightSide{
+  position: absolute;
+  display: block;
+  background-color: #3a304f;
+  width: 42px;
+  height: 100%;
+  transform: rotateY(-90deg) translateZ(-21px) translateX(21px) ;
+  right: 0;
+  top: 0;
+}
+
+.topSide{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #3a304f;
+  transform: rotateX(90deg) translateY(20px) translateZ(20px);
+}
+
+.bottomSide{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #3a304f;
+  transform: rotateX(90deg) translateY(20px) translateZ(-20px);
+
 }

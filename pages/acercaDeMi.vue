@@ -13,7 +13,8 @@ main
         p Ingeniero de sistemas egresado de la Universidad Autónoma de Bucaramanga con nivel intermedio de inglés y buenas aptitudes en el trabajo colaborativo.
         p Soy una persona responsable, puntual, autodidacta, creativa y con muy buena disposición para cualquier tarea que se me asigne.
         p Me interesa principalmente trabajar en proyectos nuevos y con un enfoque social, en el área de desarrollo web principalmente como Frontend developer.
-        p Actualmente soy desarrollador Front-End en Carvajal tecnología y servicios para el software de compra venta de facturas "Liquidez ya" .
+        p Fuy desarrollador Front-End para Carvajal tecnología y servicios en el area de innovacion para el software de compra venta de facturas "Liquidez ya" .
+        p Y actualmente soy desarrollador para el software de precompra y reservacion de mesas llamado "Precompro.com"
                   
     h2 Mis certificaciones
     .filter

@@ -1,16 +1,19 @@
 <!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <template lang="pug">
     article( @mousemove="getCursorDirection" ref="article" :style="transformPosition")
-        div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")  
-            div(class="pageBorder" :class="{ show:pageBorder ,hidden:!pageBorder }"  @click="backFace=!backFace")    
+        div.leftSide
+        div.topSide
+        div.bottomSide
+        div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace")  
             nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  
             h1 {{article.titulo}}
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
-        div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false")
-            div(class="pageBorder back" :class="{ show:pageBorder , hidden:!pageBorder }" @click="backFace=!backFace" ) 
+        div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace")
+            div(class="pageBorder back" :class="{ show:pageBorder , hidden:!pageBorder }"  ) 
             div.tagsContainer
                 tools(v-for="(tag, index) in article.tags" :key="index" :value="tag")
+        div.rightSide
 </template>
 <script>
 export default {
@@ -26,25 +29,25 @@ export default {
       stopMotion: false,
       window: {
         width: 0,
-        height: 0
+        height: 0,
       },
     }
   },
   props: {
     article: Object,
   },
-  created(){
-    window.addEventListener('resize', this.handleResize);
-    this.window.width=window.innerWidth
-    this.window.height=window.innerHeight
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.window.width = window.innerWidth
+    this.window.height = window.innerHeight
   },
-  unmounted(){
-    window.removeEventListener('resize', this.handleResize);
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize)
   },
   methods: {
-        handleResize () {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
     },
     getCursorDirection(e) {
       if (this.window.width < 800) {
@@ -62,31 +65,30 @@ export default {
       const halfX = element.offsetLeft + element.offsetWidth / 2
       let transformX
       let transformY
-
       if (e.y > halfY) {
+        console.log('abajo')
         transformX =
-          ((e.y - halfY) /
-            (element.offsetHeight +
-              element.getBoundingClientRect().top +
-              halfY)) *
-          12
+          (100 -
+          ((e.y - element.offsetTop + element.offsetHeight) /
+            (halfY - element.offsetTop + element.offsetHeight)) *
+            100)*
+        0.35
       } else if (e.y < halfY) {
+        console.log('arriba')
         transformX =
-          ((e.y - halfY) /
-            (element.getBoundingClientRect().top +
-              element.offsetHeight 
-              )) *
-          12
+          ((e.y - halfY) / (element.offsetTop + element.offsetHeight - halfY)) *
+          35 *
+          -1
       }
       if (e.x < halfX) {
         transformY =
           ((e.x - halfX) / (element.offsetLeft + element.offsetWidth - halfX)) *
-          12
+          22
       } else if (e.x > halfX) {
         transformY =
           (100 -
             ((e.x - element.offsetLeft) / (halfX - element.offsetLeft)) * 100) *
-          0.12 *
+          0.22 *
           -1
       }
       this.transformY = transformY

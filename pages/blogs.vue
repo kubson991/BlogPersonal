@@ -14,37 +14,34 @@
 </template>
 <script>
 export default {
-	layout:'blogs',
-	name:'blogs',
-	data(){
-		return{
-			articles:[
-			]
-		}
-	},
-	mounted(){
-		this.articles=this.$store.state.posts
-	}
+  layout: 'blogs',
+  name: 'blogs',
+  data() {
+    return {
+      articles: [],
+    }
+  },
+  mounted() {
+    this.articles = this.$store.state.posts
+  },
 }
-
 </script>
 <style lang="scss" scoped>
-    @import "../css/blogs.scss";
-        @media (min-width: 1024px) {
-            .main__principal{
-                justify-content: space-evenly;
-               img{
-                    width: 45%;
-               }
-                article{
-                    width: 45%;
-                }
-            }
-            .main__blogs{
-                div{
-                    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-                }
-            }
-        }
+@import '../css/blogs.scss';
+@media (min-width: 1024px) {
+  .main__principal {
+    justify-content: space-evenly;
+    img {
+      width: 45%;
+    }
+    article {
+      width: 45%;
+    }
+  }
+  .main__blogs {
+    div {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+  }
+}
 </style>
-

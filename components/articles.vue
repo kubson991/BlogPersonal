@@ -27,6 +27,7 @@ export default {
       transformY: 0,
       turnOround: false,
       stopMotion: false,
+      deviceOrientationOn: false,
       window: {
         width: 0,
         height: 0,
@@ -40,9 +41,18 @@ export default {
     window.addEventListener('resize', this.handleResize)
     this.window.width = window.innerWidth
     this.window.height = window.innerHeight
+    if (window.DeviceMotionEvent) {
+      if (this.window.width < 800) {
+        window.addEventListener('deviceorientation', this.motion, false)
+        this.deviceOrientationOn = true
+      }
+    } else {
+      this.deviceOrientationOn = false
+    }
   },
   unmounted() {
     window.removeEventListener('resize', this.handleResize)
+    window.removeEventListener('deviceorientation', this.motion)
   },
   methods: {
     handleResize() {
@@ -66,15 +76,13 @@ export default {
       let transformX
       let transformY
       if (e.y > halfY) {
-        console.log('abajo')
         transformX =
           (100 -
-          ((e.y - element.offsetTop + element.offsetHeight) /
-            (halfY - element.offsetTop + element.offsetHeight)) *
-            100)*
-        0.35
+            ((e.y - element.offsetTop + element.offsetHeight) /
+              (halfY - element.offsetTop + element.offsetHeight)) *
+              100) *
+          0.35
       } else if (e.y < halfY) {
-        console.log('arriba')
         transformX =
           ((e.y - halfY) / (element.offsetTop + element.offsetHeight - halfY)) *
           35 *
@@ -96,6 +104,13 @@ export default {
     },
     unlockMotion() {
       this.stopMotion = false
+    },
+    motion(event) {
+      console.log(event.beta)
+      this.transformX = (event.beta - 90) * -1
+      if (event.alpha < 181 && event.alpha > -181) {
+        this.transformY = event.alpha
+      }
     },
   },
   watch: {

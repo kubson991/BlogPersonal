@@ -50,6 +50,23 @@ export default {
       this.deviceOrientationOn = false
     }
   },
+  mounted() {
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      // Handle iOS 13+ devices.
+      DeviceMotionEvent.requestPermission()
+        .then((state) => {
+          if (state === 'granted') {
+            window.addEventListener('deviceorientation', this.motion)
+          } else {
+            console.error('Request to access the orientation was rejected')
+          }
+        })
+        .catch(console.error)
+    } else {
+      // Handle regular non iOS 13+ devices.
+      window.addEventListener('deviceorientation', this.motion)
+    }
+  },
   unmounted() {
     window.removeEventListener('resize', this.handleResize)
     window.removeEventListener('deviceorientation', this.motion)
@@ -106,7 +123,6 @@ export default {
       this.stopMotion = false
     },
     motion(event) {
-      console.log(event.beta)
       this.transformX = (event.beta - 90) * -1
       if (event.alpha < 181 && event.alpha > -181) {
         this.transformY = event.alpha

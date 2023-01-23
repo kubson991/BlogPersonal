@@ -41,14 +41,6 @@ export default {
     window.addEventListener('resize', this.handleResize)
     this.window.width = window.innerWidth
     this.window.height = window.innerHeight
-    if (window.DeviceMotionEvent) {
-      if (this.window.width < 800) {
-        window.addEventListener('deviceorientation', this.motion, false)
-        this.deviceOrientationOn = true
-      }
-    } else {
-      this.deviceOrientationOn = false
-    }
   },
   mounted() {
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
@@ -56,6 +48,7 @@ export default {
       DeviceMotionEvent.requestPermission()
         .then((state) => {
           if (state === 'granted') {
+            this.deviceOrientationOn = true
             window.addEventListener('deviceorientation', this.motion)
           } else {
             console.error('Request to access the orientation was rejected')
@@ -63,6 +56,7 @@ export default {
         })
         .catch(console.error)
     } else {
+      this.deviceOrientationOn = true
       // Handle regular non iOS 13+ devices.
       window.addEventListener('deviceorientation', this.motion)
     }

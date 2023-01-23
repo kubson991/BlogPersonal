@@ -45,7 +45,7 @@ export default {
   mounted() {
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
       // Handle iOS 13+ devices.
-      DeviceMotionEvent.requestPermission()
+      DeviceOrientationEvent.requestPermission()
         .then((state) => {
           if (state === 'granted') {
             this.deviceOrientationOn = true

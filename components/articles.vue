@@ -117,10 +117,8 @@ export default {
       this.stopMotion = false
     },
     motion(event) {
+      console.log(event)
       this.transformX = (event.beta - 90) * -1
-      if (event.alpha < 181 && event.alpha > -181) {
-        this.transformY = event.alpha
-      }
     },
   },
   watch: {

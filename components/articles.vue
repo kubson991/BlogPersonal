@@ -43,7 +43,8 @@ export default {
     this.window.height = window.innerHeight
   },
   mounted() {
-    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+    if (this.window.width<600) {
+          if (typeof DeviceMotionEvent.requestPermission === 'function') {
       // Handle iOS 13+ devices.
       DeviceOrientationEvent.requestPermission()
         .then((state) => {
@@ -60,6 +61,8 @@ export default {
       // Handle regular non iOS 13+ devices.
       window.addEventListener('deviceorientation', this.motion)
     }
+    }
+
   },
   unmounted() {
     window.removeEventListener('resize', this.handleResize)

@@ -19,7 +19,7 @@ export default {
       { rel: 'icon', type: 'image', href: '/favicon.jpg' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+        href: 'https://fonts.googleapis.com/css2?family=Material+Icons+Outlined',
       },
     ],
   },

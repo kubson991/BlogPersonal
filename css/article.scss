@@ -26,18 +26,6 @@
 .hidden {
   display: none;
 }
-// article::before {
-//   content: ' ';
-//   position: absolute;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 1;
-
-//   opacity: 0.97;
-//   transform-style: preserve-3d;
-//   backface-visibility: hidden;
-// }
 article {
   box-shadow: 0px 15px 25px -20px $color-variacion;
   animation-name: spawn;
@@ -47,13 +35,11 @@ article {
   animation-iteration-count: unset;
   animation-direction: normal;
   animation-fill-mode: forwards;
-
   position: relative;
   right: 200vw;
   perspective: 250rem;
   width: 90%;
   height: 450px;
-  margin: 10px auto;
   position: relative;
   z-index: 2;
   transform-style: preserve-3d;
@@ -73,7 +59,7 @@ article {
     box-shadow: -8px 3px 8px -5px rgba(50, 50, 50, 0.32);
     transition: all 2s;
     transform: translateZ(40px);
-    background-image: url('https://i.imgur.com/y5Bb3B4.gif');
+    background-image: url('@/assets/animations/redSpace.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -86,7 +72,7 @@ article {
     backface-visibility: visible;
     box-shadow: -8px 3px 8px -5px rgba(50, 50, 50, 0.32);
     z-index: 1;
-    background-image: url('https://i.pinimg.com/originals/21/5c/7f/215c7fdca6033092baa04b35c17466bd.gif');
+    background-image: url('@/assets/animations/blueSpace.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -114,9 +100,6 @@ article {
     @include botonBlogs();
     color: white;
   }
-  .back {
-    background-image: url('https://i.imgur.com/y5Bb3B4.gif');
-  }
   .tagsContainer {
     position: absolute;
     display: flex;
@@ -129,23 +112,25 @@ article {
     left: 0;
     right: 0;
     margin: auto;
-    row-gap: 5rem;
+    row-gap: 4rem;
     column-gap: 2rem;
+    @media screen and (max-width:1100px) and (min-width:900px) {
+      row-gap: 2rem;
+    }
   }
 }
-
-.leftSide{
+.bottomSide,.leftSide,.rightSide,.topSide{
   position: absolute;
   display: block;
-background-color: #3a304f;
+  background-color: #3a304f;
+  pointer-events: none;
+}
+.leftSide{
   width: 42px;
   height: 100%;
   transform: rotateY(-90deg) translateZ(21px) translateX(21px) ;
 }
 .rightSide{
-  position: absolute;
-  display: block;
-  background-color: #3a304f;
   width: 42px;
   height: 100%;
   transform: rotateY(-90deg) translateZ(-21px) translateX(21px) ;
@@ -154,20 +139,17 @@ background-color: #3a304f;
 }
 
 .topSide{
-  position: absolute;
   top: 0;
   width: 100%;
   height: 40px;
-  background-color: #3a304f;
   transform: rotateX(90deg) translateY(20px) translateZ(20px);
 }
 
 .bottomSide{
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 40px;
-  background-color: #3a304f;
   transform: rotateX(90deg) translateY(20px) translateZ(-20px);
 
 }
+

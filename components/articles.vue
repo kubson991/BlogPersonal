@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <template lang="pug">
-    article( @mousemove="getCursorDirection" ref="article" :style="transformPosition")
+    article( @mousemove.passive="getCursorDirection" ref="article" :style="transformPosition")
         div.leftSide
         div.topSide
         div.bottomSide
@@ -10,7 +10,7 @@
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
         div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace")
-            div(class="pageBorder back" :class="{ show:pageBorder , hidden:!pageBorder }"  ) 
+            div(class="pageBorder" :class="{ show:pageBorder , hidden:!pageBorder }"  ) 
             div.tagsContainer
                 tools(v-for="(tag, index) in article.tags" :key="index" :value="tag")
         div.rightSide
@@ -45,7 +45,6 @@ export default {
   mounted() {
     if (this.window.width<600) {
           if (typeof DeviceMotionEvent.requestPermission === 'function') {
-      // Handle iOS 13+ devices.
       DeviceOrientationEvent.requestPermission()
         .then((state) => {
           if (state === 'granted') {
@@ -84,34 +83,23 @@ export default {
       if (!element) {
         return ''
       }
-      const halfY =
-        element.getBoundingClientRect().top + element.offsetHeight / 2
-      const halfX = element.offsetLeft + element.offsetWidth / 2
+      const rect = element.getBoundingClientRect()
+      const mousePosition= {x:e.clientX - rect.left , y:e.clientY - rect.top < 0 ? 0 : e.clientY - rect.top}
+      const halfY =  element.offsetHeight / 2
+      const halfX =  element.offsetWidth / 2
+      const maxDegToleranceX = 18
+      const maxDegToleranceY = 18
       let transformX
       let transformY
-      if (e.y > halfY) {
-        transformX =
-          (100 -
-            ((e.y - element.offsetTop + element.offsetHeight) /
-              (halfY - element.offsetTop + element.offsetHeight)) *
-              100) *
-          0.35
-      } else if (e.y < halfY) {
-        transformX =
-          ((e.y - halfY) / (element.offsetTop + element.offsetHeight - halfY)) *
-          35 *
-          -1
+      if (mousePosition.y > halfY) {
+        transformX =  ((mousePosition.y - halfY) / halfY) * maxDegToleranceX
+      } else if (mousePosition.y < halfY) {
+        transformX = ((halfY - mousePosition.y) / halfY)* (maxDegToleranceX * - 1)
       }
-      if (e.x < halfX) {
-        transformY =
-          ((e.x - halfX) / (element.offsetLeft + element.offsetWidth - halfX)) *
-          22
-      } else if (e.x > halfX) {
-        transformY =
-          (100 -
-            ((e.x - element.offsetLeft) / (halfX - element.offsetLeft)) * 100) *
-          0.22 *
-          -1
+      if (mousePosition.x < halfX) {
+        transformY = ((halfX - mousePosition.x) / halfX)* (maxDegToleranceY * - 1)
+      } else if (mousePosition.x > halfX) {
+        transformY = ((mousePosition.x - halfX) / halfX) * maxDegToleranceX
       }
       this.transformY = transformY
       this.transformX = transformX
@@ -120,7 +108,6 @@ export default {
       this.stopMotion = false
     },
     motion(event) {
-      console.log(event)
       this.transformX = (event.beta - 90) * -1
     },
   },

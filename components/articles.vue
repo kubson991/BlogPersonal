@@ -5,7 +5,7 @@
         div.topSide
         div.bottomSide
         div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace" )  
-            nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" loading="lazy" )  
+            nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" )  
             h1 {{article.titulo}}
             p {{article.intro}}
             NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir

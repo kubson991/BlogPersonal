@@ -1,9 +1,9 @@
 <template lang="pug">
     header(v-bind:class="{'header--transparent':this.$route.path=='/'}")
         Darkmode.darkmode(v-if="this.$route.path!=='/'")
-        section.header__IndexLogo
+        section.header__IndexLogo(v-show="this.$route.path!=='/'")
             nuxt-link(:to="`/`")
-        section.header__About-me
+        section.header__About-me(v-show="this.$route.path!=='/'")
             nuxt-link.a--i(:to="`/acercaDeMi`") Sobre mi    
         nav.header__icon-container
             a(href="https://www.instagram.com/sebastianpovedaflorez/?hl=es-la") 

@@ -10,7 +10,7 @@
             section.main__blogs
                 h2 Mis proyectos
                 div
-                    Articles(v-for="article in articles" :article="article" :key="article.h1")
+                    Articles(v-for="article in articleByPagination" :article="article" :key="article.h1")
 </template>
 <script>
 export default {
@@ -19,10 +19,39 @@ export default {
   data() {
     return {
       articles: [],
+      pagination:1
     }
   },
   mounted() {
+    const scrollContainer = document.getElementsByTagName('body')[0]
+    scrollContainer.addEventListener('scroll',this.paginatorController,{passive:true})
     this.articles = this.$store.state.posts
+  },
+  methods:{
+    paginateArray(array, itemsPerPage,pagination) {
+    const endIndex = itemsPerPage*pagination;
+    return array.slice(0, endIndex);
+},
+  paginatorController(e){
+    const scrollContainer=e.target
+    const scrollHeight  = scrollContainer.scrollHeight ;
+    const containerHeight = scrollContainer.clientHeight;
+    const scrollTop = scrollContainer.scrollTop;
+
+    if (scrollTop + containerHeight >= scrollHeight - 50) {
+      this.pagination++
+    }
+  }
+  },
+  computed:{
+    articleByPagination(){
+      const pages = window.innerWidth>1600 ? 4 : 6
+      return this.paginateArray(this.articles,pages,this.pagination)
+    }
+  },
+  beforeUnmount() {
+    const scrollContainer = document.getElementsByTagName('body')[0]
+    scrollContainer.removeEventListener(this.paginatorController)
   },
 }
 </script>

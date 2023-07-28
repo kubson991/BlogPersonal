@@ -1,4 +1,12 @@
 
+.darkmode {
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
 div{   
     border-radius: 1px black solid;
     background-size: 16rem;
@@ -24,18 +32,18 @@ div{
         top:0;
         bottom:0;
         margin: auto;
-        cursor:pointer;
+        cursor: url('@/assets/img/cursors/pointer.png') 15 15,auto;
     }
 
 
 }
 .night:not(div){
-    animation: startNight 1s linear forwards alternate;
+    animation: startNight 0.8s linear forwards alternate;
 
 }
 .day:not(div){
     margin-left: 1rem;
-    animation: startDay 1s linear forwards alternate;
+    animation: startDay 0.8s linear forwards alternate;
 
 }
 @keyframes startDay {

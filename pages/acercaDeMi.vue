@@ -14,7 +14,8 @@ main
         p Soy una persona responsable, puntual, autodidacta, creativa y con muy buena disposición para cualquier tarea que se me asigne.
         p Me interesa principalmente trabajar en proyectos nuevos y con un enfoque social, en el área de desarrollo web principalmente como Frontend developer.
         p Fuy desarrollador Front-End para Carvajal tecnología y servicios en el area de innovacion para el software de compra venta de facturas "Liquidez ya" .
-        p Y actualmente soy desarrollador para el software de precompra y reservacion de mesas llamado "Precompro.com"
+        p Tambien desarrolle para el software de precompra y reservacion de mesas llamado "Precompro.com como lider de desarrollo Frontend
+        p Actualmente Soy desarrollador Frontend para Etnia Barcelona encargado de codificar en un entorno MVC Tanto en Vue como en Nuxt" 
                   
     h2 Mis certificaciones
     .filter

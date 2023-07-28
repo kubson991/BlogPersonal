@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     transition: transform 0.8s ease-out;
-    cursor: pointer;
+    cursor: url('@/assets/img/cursors/pointer.png') 15 15,auto;
     @media screen and (min-width:900px) and (max-width:1100px) {
         min-width: 110px;
     }

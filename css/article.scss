@@ -8,6 +8,14 @@
     right: 0;
   }
 }
+@keyframes spawnReverse {
+  from {
+    left: 200vw;
+  }
+  to {
+    left: 0;
+  }
+}
 @keyframes showDobles {
   from {
     width: 0rem;
@@ -42,7 +50,13 @@ article {
   height: 450px;
   position: relative;
   z-index: 2;
-  transform-style: preserve-3d;                                                                                                              
+  transform-style: preserve-3d;
+  left: unset;
+    &:nth-of-type(2n+1) {
+      right: unset;
+      left: 200vw;
+      animation-name: spawnReverse;
+    }                                                                                                           
   .containerF,.containerB{
     position: absolute;
     width: 100%;
@@ -77,6 +91,7 @@ article {
     width: 55%;
     height: auto;
     border-radius: 0.7rem;
+    aspect-ratio: 1/0.5;
   }
   h1 {
     text-align: center;
@@ -86,10 +101,12 @@ article {
   }
   p {
     width: 85%;
-    max-height: 38%;
+    max-height:5.5em ;
     overflow-y: hidden;
     text-align: justify;
     color: white;
+    text-overflow: ellipsis;
+
   }
   a {
     width: fit-content;

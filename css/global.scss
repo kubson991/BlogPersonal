@@ -6,6 +6,7 @@ html {
   font-size: 62.5%;
   width: 100vw;
   max-width: 100%;
+  overflow: hidden;
 }
 * {
   margin: 0;
@@ -13,9 +14,13 @@ html {
   font-size: 1.6rem;
 }
 body {
+  cursor: url('@/assets/img/cursors/cursor.png'),auto;
   font-family: $Fuente2;
   background-color: $color-claro;
   transition: background-color 1s ease-in;
+  overflow-y: scroll;
+  max-height: 100vh;
+
 }
 p {
   transition: background-color 1s ease-in;
@@ -37,8 +42,12 @@ h2 {
 section {
   transition: background-color 1s ease-in;
 }
+input{
+  cursor: url('@/assets/img/cursors/text.png'),auto;
+}
 a {
   color: $color-variacion;
+  cursor: url('@/assets/img/cursors/pointer.png') 15 15,auto;
   &:hover {
     color: $color-variacionTrasparente;
   }
@@ -62,7 +71,6 @@ img {
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
-
 body::-webkit-scrollbar {
   width: 10px;
   background-color: $color-gris;
@@ -70,6 +78,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: $color-variacion;
   border-radius: 4px;
+
 }
 @media (min-width: 1600px) {
   * {

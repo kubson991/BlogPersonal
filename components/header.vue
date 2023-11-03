@@ -10,7 +10,7 @@
                 span(class="instagram")  
             a(href="https://www.linkedin.com/in/juan-sebastián-poveda-flórez-07b412212/") 
                 span(class="link") 
-            a(href="https://wa.link/1q8fsy") 
+            a(href="https://api.whatsapp.com/send?phone=573153347695&text=hola%20vengo%20de%20tu%20portafolio!") 
                 span(class="wap") 
 </template>
 <script>

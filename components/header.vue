@@ -20,6 +20,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../css/header.scss';
+header{
+          position: relative;
+        z-index: 2;
+}
 @media (min-width: 1024px) {
   .header__icon-container {
     width: 35%;

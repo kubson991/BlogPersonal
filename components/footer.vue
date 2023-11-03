@@ -9,4 +9,8 @@ export default {
 </script>
 <style lang="scss" scoped>
     @import "../css/footer.scss";
+    footer{
+        position: relative;
+        z-index: 2;
+    }
 </style>

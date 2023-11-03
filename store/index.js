@@ -344,7 +344,7 @@ Se que estas pensando, "pero esto no tiene nada de especial... incluso si presio
       tags: ['CSS', 'HTML', 'JS', 'Node', 'Angular', 'RWD'],
     },
   ],
-  darkMode: false,
+  darkMode: true,
 })
 
 export const getters = {

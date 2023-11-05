@@ -1,12 +1,12 @@
 <template lang="pug">
     main.pantalla
         div
-            section.main__principal
-                nuxt-img(src="v1635112679/blogPersonal/indexpage_vbluxj.png", alt="blog" , provider="cloudinary" sizes="md:615px xl:625px" , format="webp" width="160" height="94")
+            section.main__principal(v-if="mainArticle.post")
+                nuxt-img(:src="mainArticle.imagen", alt="blog" , provider="cloudinary" sizes="md:615px xl:625px" , format="webp" width="160" height="94")
                 article.principal__articulo
-                    h1 Creacion de un blog profesional con el uso de dipslay Grid y Display Flex
-                    p Al día de hoy muchos desarrolladores discuten cuando usar display flex y cuando display grid, la realidad es que la combinación de ambos puede ser siempre la mejor respuesta, este blog presenta un patrón que enfatiza en uso de Flex para su maquetación y Grid para sus componentes más pequeños teniendo así lo mejor de ambos mundos y por supuesto no olvidemos el uso de VueJS con Nuxt que hace posible el enrutamiento y división por módulos del proyecto.
-                    nuxt-link.boton-articulos(:to="`/blog/MiBlog`") Leer mas
+                    h1 {{mainArticle.titulo}}
+                    p {{mainArticle.post}}
+                    nuxt-link.boton-articulos(:to="`/blog/${mainArticle.blog}`") Leer mas
             section.main__blogs
                 h2 Mis proyectos
                 div
@@ -19,18 +19,27 @@ export default {
   data() {
     return {
       articles: [],
-      pagination:1
+      pagination:1,
+      mainArticle:{}
+
     }
   },
-  mounted() {
+  created() {
     const scrollContainer = document.getElementsByTagName('body')[0]
     scrollContainer.addEventListener('scroll',this.paginatorController,{passive:true})
     this.articles = this.$store.state.posts
+    this.getRandomElement()
+    setInterval(this.getRandomElement, 15000);
   },
   methods:{
     paginateArray(array, itemsPerPage,pagination) {
     const endIndex = itemsPerPage*pagination;
     return array.slice(0, endIndex);
+},
+ getRandomElement() {
+  const randomSpot = Math.floor(Math.random() * this.articles.length);
+  const selectArticle = this.articles[randomSpot];
+  this.mainArticle=selectArticle
 },
   paginatorController(e){
     const scrollContainer=e.target

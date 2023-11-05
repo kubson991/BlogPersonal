@@ -48,7 +48,7 @@ Tambien es importante recalcar ,el no uso de librerias o frameworks de ningun ti
       intro:
         'Aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
       blog: 'platziExchange',
-      post: `aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).}
+      post: `aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).
 
 a pesar de ello la recarga continua permite ver la idea inicial de esta , esto no das una buena reflexión acerca del uso de APIs externas a notros y como esta puede verse afectada por un repentino cambio.  `,
       direccion: 'https://kubson-exchange.netlify.app',

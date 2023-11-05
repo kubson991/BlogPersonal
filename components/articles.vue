@@ -1,19 +1,40 @@
 <!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <template lang="pug">
-    article( @mousemove.passive="getCursorDirection" ref="article" :style="transformPosition")
-        div.leftSide
-        div.topSide
-        div.bottomSide
-        div.containerF(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace" )  
-            nuxt-img(:src="this.article.imagen" :alt="this.article.alt"  provider="cloudinary" format="webp"  width="250" loading="lazy" )  
-            h1 {{article.titulo}}
-            p {{article.intro}}
-            NuxtLink(:to="`/blog/${this.article.blog}`") Descubrir
-        div.containerB(@mouseover="pageBorder=true" @mouseleave="pageBorder=false" @click="backFace=!backFace")
-            div(class="pageBorder" :class="{ show:pageBorder , hidden:!pageBorder }"  ) 
-            div.tagsContainer
-                tools(v-for="(tag, index) in article.tags" :key="index" :value="tag")
-        div.rightSide
+article(
+  @mousemove.passive='getCursorDirection',
+  @mouseleave.passive='resetCoordenates',
+  ref='article',
+  :style='transformPosition'
+)
+  .leftSide
+  .topSide
+  .bottomSide
+  .containerF(
+    @mouseover='pageBorder = true',
+    @mouseleave='pageBorder = false',
+    @click='backFace = !backFace'
+  ) 
+    |
+    nuxt-img(
+      :src='this.article.imagen',
+      :alt='this.article.alt',
+      provider='cloudinary',
+      format='webp',
+      width='250',
+      loading='lazy'
+    ) 
+    h1 {{ article.titulo }}
+    p {{ article.intro }}
+    NuxtLink(:to='`/blog/${this.article.blog}`') Descubrir
+  .containerB(
+    @mouseover='pageBorder = true',
+    @mouseleave='pageBorder = false',
+    @click='backFace = !backFace'
+  )
+    .pageBorder(:class='{ show: pageBorder, hidden: !pageBorder }') 
+    .tagsContainer
+      tools(v-for='(tag, index) in article.tags', :key='index', :value='tag')
+  .rightSide
 </template>
 <script>
 export default {
@@ -42,30 +63,9 @@ export default {
     this.window.width = window.innerWidth
     this.window.height = window.innerHeight
   },
-  mounted() {
-    if (this.window.width<600) {
-          if (typeof DeviceMotionEvent.requestPermission === 'function') {
-      DeviceOrientationEvent.requestPermission()
-        .then((state) => {
-          if (state === 'granted') {
-            this.deviceOrientationOn = true
-            window.addEventListener('deviceorientation', this.motion)
-          } else {
-            console.error('Request to access the orientation was rejected')
-          }
-        })
-        .catch(console.error)
-    } else {
-      this.deviceOrientationOn = true
-      // Handle regular non iOS 13+ devices.
-      window.addEventListener('deviceorientation', this.motion)
-    }
-    }
-
-  },
+  mounted() {},
   unmounted() {
     window.removeEventListener('resize', this.handleResize)
-    window.removeEventListener('deviceorientation', this.motion)
   },
   methods: {
     handleResize() {
@@ -84,25 +84,32 @@ export default {
         return ''
       }
       const rect = element.getBoundingClientRect()
-      const mousePosition= {x:e.clientX - rect.left , y:e.clientY - rect.top < 0 ? 0 : e.clientY - rect.top}
-      const halfY =  element.offsetHeight / 2
-      const halfX =  element.offsetWidth / 2
+      const mousePosition = {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top < 0 ? 0 : e.clientY - rect.top,
+      }
+      const halfY = element.offsetHeight / 2
+      const halfX = element.offsetWidth / 2
       const maxDegToleranceX = 18
       const maxDegToleranceY = 18
       let transformX
       let transformY
-      if (mousePosition.y > halfY) {
-        transformX =  ((mousePosition.y - halfY) / halfY) * maxDegToleranceX
-      } else if (mousePosition.y < halfY) {
-        transformX = ((halfY - mousePosition.y) / halfY)* (maxDegToleranceX * - 1)
-      }
-      if (mousePosition.x < halfX) {
-        transformY = ((halfX - mousePosition.x) / halfX)* (maxDegToleranceY * - 1)
-      } else if (mousePosition.x > halfX) {
-        transformY = ((mousePosition.x - halfX) / halfX) * maxDegToleranceX
-      }
+  if (mousePosition.y > halfY) {
+    transformX = ((mousePosition.y - halfY) / halfY) * maxDegToleranceX * -1;
+  } else if (mousePosition.y < halfY) {
+    transformX = ((halfY - mousePosition.y) / halfY) * maxDegToleranceX ;
+  }
+  if (mousePosition.x < halfX) {
+    transformY = ((halfX - mousePosition.x) / halfX) * maxDegToleranceY * -1;
+  } else if (mousePosition.x > halfX) {
+    transformY = ((mousePosition.x - halfX) / halfX) * maxDegToleranceY;
+  }
       this.transformY = transformY
       this.transformX = transformX
+    },
+    resetCoordenates() {
+      this.transformY = 0
+      this.transformX = 0
     },
     unlockMotion() {
       this.stopMotion = false

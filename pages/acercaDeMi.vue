@@ -58,6 +58,7 @@ export default {
       filterClose: true,
       filtro: '',
       certificaciones: [
+        'v1700925686/blogPersonal/certificados/Microfrontends-with-React_peo1iq.jpg',
         'v1669139010/blogPersonal/certificados/diploma-angular-componentes-y-servicios.png',
         'v1664854039/blogPersonal/certificados/Electron-from-scratch:build-desktop-apps-with-javascript.png',
         'v1663201418/blogPersonal/certificados/Adobe-Photoshop-CC:Curso-Completo-de-Principiante-a-Experto.png',

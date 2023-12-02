@@ -84,9 +84,11 @@
 
   }
   h2 {
-    animation: titleScroll linear both;
-    animation-timeline:--pruebaDeConcepto;
-    animation-range: entry-crossing 0% contain 100%;
+    @supports (animation-range: entry-crossing 0% contain 100%){
+      animation: titleScroll linear both;
+      animation-timeline:--pruebaDeConcepto;
+      animation-range: entry-crossing 0% contain 100%;
+    }
     width: 80%;
     text-align: center;
     border-bottom: 0.1rem solid rgba(128, 128, 128, 0.466);

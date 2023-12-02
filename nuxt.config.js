@@ -15,11 +15,6 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    script: [
-      {
-        src: 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js',
-      }
-    ],
     link: [
       { rel: 'icon', type: 'image', href: '/favicon.jpg' },
       {

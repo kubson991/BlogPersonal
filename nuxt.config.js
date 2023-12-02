@@ -18,8 +18,6 @@ export default {
     script: [
       {
         src: 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js',
-        async: true,
-        defer: true
       }
     ],
     link: [

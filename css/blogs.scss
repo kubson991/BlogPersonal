@@ -1,5 +1,31 @@
 @import 'config.scss';
 
+@keyframes titleScroll {
+  0%{
+    position: relative;
+    background-color: transparent;
+  }
+  97%{
+    background-color: transparent;
+  }
+  98%{
+    background-color: $color-principal;
+  }
+  99%{
+    position: relative;
+  }
+  100%{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: $color-variacion;
+    width: 100%;
+    padding-top: 1rem;
+  }
+}
+
 .main__principal {
   display: flex;
   flex-wrap: wrap;
@@ -45,13 +71,29 @@
 }
 
 .main__blogs {
+  .articlesContainers{
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 1.8rem 0;
+  }
+  header{
+    margin: 4.5rem auto;
+    width: 100%;
+    min-height: 1.2em;
+    view-timeline:--pruebaDeConcepto;
+
+  }
   h2 {
+    animation: titleScroll linear both;
+    animation-timeline:--pruebaDeConcepto;
+    animation-range: entry-crossing 0% contain 100%;
     width: 80%;
     text-align: center;
     border-bottom: 0.1rem solid rgba(128, 128, 128, 0.466);
-    margin: 4.5rem auto;
     padding-bottom: 1.5rem;
     color: $color-principal;
+    margin: auto;
+
   }
   div {
     display: grid;

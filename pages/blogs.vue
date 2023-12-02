@@ -8,8 +8,9 @@
                     p {{mainArticle.post}}
                     nuxt-link.boton-articulos(:to="`/blog/${mainArticle.blog}`") Leer mas
             section.main__blogs
-                h2 Mis proyectos
-                div
+                header
+                  h2 Mis proyectos
+                div.articlesContainers
                     Articles(v-for="article in articleByPagination" :article="article" :key="article.h1")
 </template>
 <script>
@@ -47,7 +48,7 @@ export default {
     const containerHeight = scrollContainer.clientHeight;
     const scrollTop = scrollContainer.scrollTop;
 
-    if (scrollTop + containerHeight >= scrollHeight - 50) {
+    if (scrollTop + containerHeight >= scrollHeight - 130) {
       this.pagination++
     }
   }

@@ -34,7 +34,6 @@ export default {
 
 }
 .global {
-  overflow-x: hidden;
   min-height: 100vh;
   background-color: $color-claro;
 

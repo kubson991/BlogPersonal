@@ -5,7 +5,6 @@
 </template>
 <style lang="scss" scoped>
     .global{
-        overflow: hidden;
         min-height: 100vh;
     }
     .content{

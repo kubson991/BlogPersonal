@@ -58,7 +58,7 @@
       color: $color-secundario;
       opacity: 1;
       line-height: 1.3em;
-      max-height: 9.1em;
+      max-height: calc(1.3em * 7);
       text-overflow: ellipsis;
       overflow: hidden;
     }

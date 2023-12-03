@@ -44,7 +44,7 @@ Tambien es importante recalcar ,el no uso de librerias o frameworks de ningun ti
       imagen:
         'v1636484864/blogPersonal/blogs/imagen_2021-11-09_140743_tqnbuz.png',
       alt: 'platzi exchange',
-      titulo: 'creacion y despliegue de pagina acerca de criptomonedas',
+      titulo: 'Pagina acerca de criptomonedas',
       intro:
         'Aplicacion web que permite ver graficamente el cambio de las criptomonedas mas populares y calcular sus divisas,sin embargo la api rest cambio sus permisos de CORS volviendola una aplicacion inestable (hecha con Vue CLI).',
       blog: 'platziExchange',
